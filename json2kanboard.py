@@ -295,7 +295,9 @@ def create_project(
       # Empty string if no due_date
       task_due_date = ''
 
-    # t.get('column_id', '0')
+    # Task collumn. Default is 1 (Leftmost)
+    task_col = project_columns_by_position.get(t.get('column', '1'), '1')
+    
     # Create the task
     new_task_id = kb.create_task(
       project_id = new_project_id,
@@ -305,7 +307,7 @@ def create_project(
       color_id = t.get('color', ''),
       tags = t.get('tags', []),
       date_due = task_due_date,
-      column_id = ''
+      column_id = task_col['id']
       )
 
     if new_task_id:
