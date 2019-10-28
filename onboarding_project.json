@@ -1,0 +1,595 @@
+{
+  "title": "Project title in JSON",
+  "description": "Project description in JSON",
+  "owner": "",
+  "users": [
+      {"name": "plj", "role": "project-member"},
+      {"name": "knj", "role": "project-member"}
+    ],
+  "swimlanes": [
+    {"title": "Swimlane A", "desc": "Swimlane description"}
+  ],
+  "tasks": [
+    {
+      "title": "Check oplysninger i brugerdatabasen",
+      "description": "Check data I brugerdatabasen",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "HR"
+      ],
+      "subtasks": [
+        {"title": "Check startdato"},
+        {"title": "Check slutdato"},
+        {"title": "Check titel"},
+        {"title": "Check kommentarer i kommentarfelt"}
+      ]
+    },
+    {
+      "title": "Send intromail",
+      "description": "Check data I brugerdatabasen",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Opret ny person i pension",
+      "description": "Dette kan først ske 30 dage efter fordi?",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "+30",
+      "column": "1",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Tilføj person i dataløn",
+      "description": "Dette kan først ske 60 dage efter fordi?",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "+60",
+      "column": "1",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Bekræft salgspris med people manager",
+      "description": "",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Facilitér møde vedr. production management v. OK",
+      "description": "OBS! Kun grafikere og designere hos Everland",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "HR",
+        "Everland"
+      ]
+    },
+    {
+      "title": "Opret ny person i Workbook",
+      "description": "",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "HR"
+      ],
+      "subtasks": [
+        {"title": "Tilføj bankinfo til medarbejderkreditor"}
+      ]
+    },
+    {
+      "title": "Opret ny person i Dataløn",
+      "description": "",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "HR"
+      ],
+      "subtasks": [
+        {"title": "Indhent bankinfo"},
+        {"title": "Tilføj feriedage"},
+        {"title": "Udregn løn ift. ansættelsesdato"},
+        {"title": "Påfør skattedage"}
+      ]
+    },
+    {
+      "title": "Opret ny person i personaleoversigten",
+      "description": "",
+      "owner": "knj",
+      "color": "orange",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Opret ny person i financefill",
+      "description": "",
+      "owner": "knj",
+      "color": "dark_grey",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "Finance"
+      ]
+    },
+    {
+      "title": "Booke intro til pipelinestyring",
+      "description": "Denne task gælder kun for project managers",
+      "owner": "knj",
+      "color": "dark_grey",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "Finance",
+        "Project managers only"
+      ]
+    },
+    {
+      "title": "Klargør skrivebord til ny person",
+      "description": "Denne sag afhænger af, at people manageren finder et bord",
+      "owner": "knj",
+      "color": "purple",
+      "due_date": "-7",
+      "column": "1",
+      "tags": [
+        "Helpdesk",
+        "Kontrapunkt"
+      ],
+      "subtasks": [
+        {"title": "Hvor skal den nye person sidde?"},
+        {"title": "Rengør bord"},
+        {"title": "Læg blok"},
+        {"title": "Læg Post-it"},
+        {"title": "Læg skriveredskaber"},
+        {"title": "Læg \"Tone of voice\" 2 & 3"},
+        {"title": "Læg Æble"},
+        {"title": "Læg lille håndskreven hilsen"}
+      ]
+    },
+    {
+      "title": "Praktisk introduktion til huset",
+      "description": "",
+      "owner": "knj",
+      "color": "purple",
+      "due_date": "+7",
+      "column": "1",
+      "tags": [
+        "Helpdesk"
+      ],
+      "subtasks": [
+        {"title": "Udlever fysisk nøgle"},
+        {"title": "Udlever kode eller brik (RFID) til alarm"},
+        {"title": "Gennemgang af alarmsystem"},
+        {"title": "Gennemgang af brandsikkerhed"},
+        {"title": "Bestil blomster"}
+      ]
+    },
+    {
+      "title": "Hent blomster",
+      "description": "Blomster kan bestilles/hentes/bringes. Se nedenstående link",
+      "owner": "knj",
+      "color": "purple",
+      "due_date": "0",
+      "column": "1",
+      "tags": [
+        "Helpdesk"
+      ],
+      "subtasks": [
+        {"title": "Hent blomster"},
+        {"title": "Sæt blomster på ny persons bord"}
+      ]
+    },
+    {
+      "title": "Billede til website",
+      "description": "",
+      "owner": "knj",
+      "color": "pink",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "subtasks": [
+        {"title": "Skal der et profilbillede på websitet?"},
+        {"title": "Tag billede af ny person"},
+        {"title": "Opdater website med billede af ny person"}
+      ]
+    },
+    {
+      "title": "Annoncér ny person eksternt",
+      "description": "",
+      "owner": "knj",
+      "color": "pink",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "subtasks": [
+        {"title": "Skriv tekst om ny person?"},
+        {"title": "Få fat i billede af ny person"},
+        {"title": "Få tekst om ny person godkendt hos people manager"},
+        {"title": "Post på Linked-in"},
+        {"title": "Post på Facebook"},
+        {"title": "Post på eget website"},
+        {"title": "Post i eget chat room \"GRP - People\""}
+      ]
+    },
+    {
+      "title": "Sæt rettigheder i Adobe Cloud",
+      "description": "Giv brugeren adgang til de produkter de skal bruge",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "+5",
+      "column": "1",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Har den nye person oprettet en Adobe-konto?"},
+        {"title": "Tilegen rettigheder til brugeren hos Adobe"}
+      ]
+    },
+    {
+      "title": "Klargør computer til ny person",
+      "description": "Afhængig af at der er blever valgt en computer",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-7",
+      "column": "1",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Kryptér maskine med FileVault"},
+        {"title": "Sæt styresystem til engelsk"},
+        {"title": "Opsæt WIFI"},
+        {"title": "Lav konto til den nye bruger på maskinen"},
+        {"title": "Lav admin-konto \"kpadmin\""},
+        {"title": "Slå brug af .DS_Store filer fra på netværksdrev"},
+        {"title": "Sørg for, at packet signing fra på ældre MacOS"},
+        {"title": "Opsæt Kontrapunkts farveprintere"},
+        {"title": "Opsæt Everlands farveprintere"},
+        {"title": "Installér Kontrapunkt-fonte"},
+        {"title": "Fjern mail- og calendar-app fra docken i Finder"},
+        {"title": "Installér CleanMyMac X"},
+        {"title": "Installér Extensis Suitcase"},
+        {"title": "Installér Firefox"},
+        {"title": "Installér Chrome"},
+        {"title": "Installér Kontrapunkt Group installer CC"},
+        {"title": "Installér Politikens engelske ordbog"},
+        {"title": "Installér Viscosity (openVPN)"},
+        {"title": "Installér PDF color profiles"},
+        {"title": "Installér Adobe color profiles"},
+        {"title": "Vis percentage på batteri (Finder)"},
+        {"title": "Gør diske og servere synlige (Finder)"},
+        {"title": "Tøm papirkurv automatisk efter 30 dage (Finder)"},
+        {"title": "Fjern \"All files\" og tilføj \"Home\" (Finder)"},
+        {"title": "Brug column view (Finder)"},
+        {"title": "Sort sidebar favourites (Finder)"},
+        {"title": "Trackpad setting (Finder)"},
+        {"title": "Don't show accounts list on login (Finder)"},
+        {"title": "Sæt timezone til automatisk mm.? (Finder)"},
+        {"title": "Skift \"Computer name\" (Finder)"},
+        {"title": "Enable remote management (Finder)"},
+        {"title": "Opsæt automatisk login på filserver (Finder)"},
+        {"title": "Opsæt TimeMachine (Finder)"},
+        {"title": "Gennemfør første TimeMachine-backup"},
+        {"title": "Genstart når kryptering og backup er færdig"}
+      ]
+    },
+    {
+      "title": "Udlever login & password og Google-2FA-kode til ny bruger",
+      "description": "",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "+5",
+      "column": "1",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Opdater brugers password",
+      "description": "IT kender ikke brugerens password. Lav et.",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Generer nyt password"},
+        {"title": "Opdater brugers password i brugerdatabasen"},
+        {"title": "Opdater brugers password i Google"}
+      ]
+    },
+    {
+      "title": "Hardware til den nye person",
+      "description": "",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Skal der købes en ny computer?"},
+        {"title": "Ekstern skærm, mus og tastatur? Skal der købes nyt?"},
+        {"title": "Skal der bruges en Wacom-plade? Har vi en?"},
+        {"title": "Udlever USB-C -> ethernet-adapter"},
+        {"title": "Udlever USB-C -> HDMI-adapter"},
+        {"title": "Udlever USB-C -> USB 3.0-adapter"},
+        {"title": "Opdater assets-database"}
+      ]
+    },
+        {
+      "title": "Opret ny person i Extensis Team Sync",
+      "description": "",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Opret ny person i MS/Office 365",
+      "description": "",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-7",
+      "column": "1",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Opret dørkode eller gør brik (RFID) klar",
+      "description": "Giv kode/brik til helpdesk som står for udlevering",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-14",
+      "column": "1",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Telefon til ny person",
+      "description": "",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Skal den nye person have en telefon?"},
+        {"title": "Skal der porteres et telefon-nr nummer?"},
+        {"title": "Bestil portering af telefon-nr hvis relevant"},
+        {"title": "Opdater brugers telen-nr. i brugerdatabasen hvis ændret"},
+        {"title": "Udlever telefon"}
+      ]
+    },
+    {
+      "title": "Opret ny person i Float",
+      "description": "Bed Nille om at oprette den nye person i Float",
+      "owner": "knj",
+      "color": "green",
+      "due_date": "-7",
+      "column": "1",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Buddy-opgaver får ny person",
+      "description": "",
+      "owner": "knj",
+      "color": "lime",
+      "due_date": "0",
+      "column": "1",
+      "tags": [
+        "Buddy",
+        "Kontrapunkt"
+      ],
+      "subtasks": [
+        {"title": "Tag imod første arbejdsdag"},
+        {"title": "Deltag i morgen mad første arbejdsdag"},
+        {"title": "Sørg for frokostselskab i den første uge"},
+        {"title": "Gennemfør presentationsrunde i huset"},
+        {"title": "Sørg for at den nye person deltager i team-møder"}
+      ]
+    },
+    {
+      "title": "Annoncér ny person til huset i Google Chat",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Indkalde alle people managers til første fredagsbar",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Tilføj teammedlemmer til morgenmad den første dag",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Præsenter Kontrapunkt-cases",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "+14",
+      "column": "2",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ],
+      "subtasks": [
+        {"title": "Præsenter case 1"},
+        {"title": "Præsenter case 2"},
+        {"title": "Præsenter case 3"},
+        {"title": "Præsenter en hero-case"}
+      ]
+    },
+    {
+      "title": "Facalitér intro til søsterselskab",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "+14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Bestil visitkort til ny person hvis relevant",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Underskriv kontrakter",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ],
+      "subtasks": [
+        {"title": "Underskriv NDA"},
+        {"title": "Læg NDA i mearbejdermappen så konti oprettes"},
+        {"title": "Underskriv ansættelseskontrakt"},
+        {"title": "Læg ansættelseskontrakt i medarbejdermappen"},
+        {"title": "Underskriv consent"},
+        {"title": "Læg consent i medarbejdermappen"},
+        {"title": "Udlever Kontrapunkt booklet i forbindelse med underskrift"}
+      ]
+    },
+    {
+      "title": "Send privat begejstringsmail til den nye person",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Find en plads til den nye person",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Planlæg ny persons første dag",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Planlæg faglige aktiviteter for ny person i den første uge",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Arranger 1-to-1-talks for de første fire uger",
+      "description": "",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Book mødelokaler for 30-, 60- & 90-dagssamtaler",
+      "description": "Møderne bør være oprettede i kalenderen. Inviter mødelokale.",
+      "owner": "knj",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    }
+  ]
+}
+
+
