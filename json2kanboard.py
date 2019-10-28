@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # _*_ coding: utf-8
 
-import json
+import datetime
 import logging
+import json
 
 import sys
 
@@ -37,6 +38,7 @@ def create_project(
     project_owner = None,
     project_title = None,
     task_owner = None,
+    due_date = None
     ):
   '''
   Creates a Kanboard project with tasks from a JSON file.
@@ -67,6 +69,12 @@ def create_project(
   If not set, the owner will be the owner defined for the task in the
   project_file. If no owner is defined, or the owner name does not match
   a Kanboard user, the task will be the project owner.
+  
+  due_date = The due date of the project. If a task has the field 'due_date'
+  the value must be an integer. Of it is negative, the due date of the task
+  is x days before the project due date. If it is positive, the due date
+  is x days after the project due date. If the due date of any task is
+  after the project due data, the project due date will be set to that date.
   '''
 
   # This user will own all tasks
@@ -78,9 +86,8 @@ def create_project(
   # A dictionary of users with username as key
   users_by_username = {u['username']:u for u in kb.get_all_users()}
   
-  # A dict of users of the project
-  # Task can only be assigned to users with access to the project
-  #project_users = 
+  # Keep track of latest due date
+  latest_due_date = due_date
 
   # Project identifier must be unique
   if project_identifier:
@@ -146,6 +153,17 @@ def create_project(
     logging.info("Created project '{}' with owner '{}' and id '{}' in Kanboard"
       .format(project_title, project_owner['name'], new_project_id))
 
+  # Get all columns in board
+  project_columns = kb.get_columns(
+    project_id = new_project_id
+    )
+  
+  # Create dict of columns by position
+  # FIXME: Could be by name?
+  project_columns_by_position = {c['position']:c for c in project_columns}
+  
+  #print(project_columns)
+  #print(project_columns_by_position)
 
   # Add all users as members of the board
   for u in project_data.get('users', []):
@@ -190,7 +208,6 @@ def create_project(
     # We have no assignable users, so fall back to empty dict
     assignable_users_by_id = {}
 
-
   # Create tasks
   for t in project_data['tasks']:
     
@@ -231,7 +248,7 @@ def create_project(
 
       # Project owner will be the task owner
       task_owner = project_owner
-      
+
       # Add the project owner as a project manager
       r = kb.add_project_user(
         project_id = new_project_id,
@@ -252,6 +269,33 @@ def create_project(
         logging.error("Could not add project owner '{}' as '{}' in project '{}'"
           .format(task_owner['name'], 'project-manager', project_title))
 
+
+    # Set task due date
+    if due_date:
+      
+      # Default is the project due date
+      task_due_date = due_date
+
+      try:
+        # Modify due date based on JSON data
+        task_due_date += datetime.timedelta(days=int(t.get('due_date', 0)))
+      except:
+        logging.error("Could not modify due date with value '{}' from JSON in project '{}'"
+          .format(t['due_date'], project_title))
+
+      # Update projects latest due date
+      if latest_due_date < task_due_date:
+        latest_due_date = task_due_date
+      
+      # Convert due date to string
+      task_due_date = task_due_date.isoformat()
+
+    else:
+
+      # Empty string if no due_date
+      task_due_date = ''
+
+    # t.get('column_id', '0')
     # Create the task
     new_task_id = kb.create_task(
       project_id = new_project_id,
@@ -260,6 +304,8 @@ def create_project(
       owner_id = task_owner.get('id', ''),
       color_id = t.get('color', ''),
       tags = t.get('tags', []),
+      date_due = task_due_date,
+      column_id = ''
       )
 
     if new_task_id:
@@ -286,3 +332,5 @@ def create_project(
         logging.error("Could not create subtask '{}' in project '{}'"
           .format(st['title'], project_title))
 
+  # FIXME: Update project due date
+  #r = kb.update_project(latest_due_date:
