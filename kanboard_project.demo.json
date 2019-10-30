@@ -1,0 +1,45 @@
+{
+  "title": "Demo project",
+  "description": "Demo project created from a JSON file",
+  "owner": "",
+  "users": [
+      {"name": "user_c", "role": "project-viewer"},
+      {"name": "user_d", "role": "project-viewer"}
+    ],
+  "swimlanes": [
+    {"title": "Swimlane A", "desc": "Swimlane description"}
+  ],
+  "tasks": [
+    {
+      "title": "Task A",
+      "description": "Task description",
+      "owner": "user_a",
+      "color": "green",
+      "tags": [
+        "Tag A",
+        "Tag B"
+      ],
+      "subtasks": [
+        {"title": "Subtask A"},
+        {"title": "Subtask B"}
+      ]
+    },
+    {
+      "title": "Task B",
+      "description": "Task description",
+      "owner": "user_b",
+      "color": "red",
+      "tags": [
+        "Tag A",
+        "Tag B"
+      ],
+      "subtasks": [
+        {"title": "Subtask A"},
+        {"title": "Subtask B"},
+        {"title": "Subtask C"}
+      ]
+    }
+  ]
+}
+
+
