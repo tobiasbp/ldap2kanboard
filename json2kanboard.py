@@ -40,7 +40,7 @@ def create_project(
     project_title = None,
     task_owner = None,
     due_date = None,
-    roles = {} 
+    roles = {}
     ):
   '''
   Creates a Kanboard project with tasks from a JSON file.
@@ -77,7 +77,15 @@ def create_project(
   is x days before the project due date. If it is positive, the due date
   is x days after the project due date. If the due date of any task is
   after the project due data, the project due date will be set to that date.
+
+  roles: A dictionary with roles as keys, and users as value.
+  Using roles, you can have an owner set as "ROLE_MANAGER" in the JSON file
+  and match that role with a user (Known only by the script).
+  {'ROLE_MANAGER': 'user_a', 'ROLE_BUTLER': 'user_b'}. A role
+  is signified by prefing the role name with 'ROLE_'
   '''
+
+  # FIXME: Make all roles (keys) upper case
 
   # This user will own all tasks
   all_tasks_owner = task_owner
@@ -234,9 +242,27 @@ def create_project(
         .format(new_project_id))
       continue
 
-    # FIXME: If owner is a list?
+    # Assume no owner
     task_owner = None
     
+    # Change name of task owner if a role 
+    if 'ROLE_' in t['owner'].upper():
+
+      # The name of the role to use
+      role_name = t['owner'].upper()
+      
+      # Check for the existance of the role
+      if role_name not in roles.keys():
+        logging.warning("Role '{}' unknown in project '{}'"
+          .format(role_name, project_title))
+      
+      else:
+        # Set the user name based on the role
+        t['owner'] = roles.get(role_name, None)
+        logging.debug("Mapping role '{}' to task owner '{}' in project '{}'"
+          .format(role_name, t['owner'], project_title))
+
+
     # Get owner of all tasks if parsed to this function
     # Will override task owners in JSON
     if all_tasks_owner:
@@ -246,7 +272,6 @@ def create_project(
     elif t.get('owner', None):
       
       # If the owner is a group name, we will pick a random member
-      # and substitute the owner name with a random member of the group
       
       # Try to get a group with the name of the task owner
       group = groups_by_name.get(t['owner'], None)
@@ -276,7 +301,7 @@ def create_project(
           assignable_users_by_id = kb.get_assignable_users(
             project_id = new_project_id
             )
-        
+            
       else:  
         # Get matching Kanboard user if not a group
         task_owner = users_by_username.get(t['owner'], {})
