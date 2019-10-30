@@ -39,7 +39,8 @@ def create_project(
     project_owner = None,
     project_title = None,
     task_owner = None,
-    due_date = None
+    due_date = None,
+    roles = {} 
     ):
   '''
   Creates a Kanboard project with tasks from a JSON file.
@@ -250,16 +251,38 @@ def create_project(
       # Try to get a group with the name of the task owner
       group = groups_by_name.get(t['owner'], None)
       
-      # Update owner name if a group was found
-      if group:
-        # Get membername if group has users
-        if len(group['members']) > 0:
-          t['owner'] = random.choice(group['members'])['username']
+      # If we have a group with members
+      if group and len(group['members']) > 0:
         
-        # FIXME: Add new user to project if not there 
+        # Set random group member as task_owner
+        task_owner = random.choice(group['members'])
 
-      # Get matching Kanboard user
-      task_owner = users_by_username.get(t['owner'], {})
+        # Add group member to Kanboard project
+        if task_owner['id'] not in assignable_users_by_id:
+          r = kb.add_project_user(
+            project_id = new_project_id,
+            user_id = task_owner['id'],
+            role = 'project-member'
+            )
+        
+          if r:
+            logging.info("Adding user '{}' to project '{}' because of membership of group '{}'"
+              .format(task_owner['name'], project_title, group['name']))
+          else:
+            logging.error("Could not add user '{}' to project '{}' because of membership of group '{}'"
+              .format(task_owner['name'], project_title, group['name']))
+  
+          # Update list of users who can be assigned task in the project
+          assignable_users_by_id = kb.get_assignable_users(
+            project_id = new_project_id
+            )
+        
+      else:  
+        # Get matching Kanboard user if not a group
+        task_owner = users_by_username.get(t['owner'], {})
+      
+      # FIXME: Should all task owners not be added?
+      # If not, you MUST add single users (Non group) through the JSON-file.
       
       # Log if there was no matching user
       if not task_owner:
