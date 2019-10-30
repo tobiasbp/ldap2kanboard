@@ -38,6 +38,7 @@ def create_project(
     project_identifier = None,
     project_owner = None,
     project_title = None,
+    project_description = None,
     task_owner = None,
     due_date = None,
     roles = {}
@@ -64,9 +65,12 @@ def create_project(
   will not be created. If owner is not a Kanboard user (or it is not set)
   the project will not be created.
   
-  project_name: The the title of the project.
+  project_title: The title of the project.
   If unset, it will be read from the field 'title' in the project_file.
-  
+
+  project_description: The description of the project.
+  If unset, it will be read from the field 'description' in the project_file.
+
   task_owner: Username of a Kanboard user to own all tasks.
   If not set, the owner will be the owner defined for the task in the
   project_file. If no owner is defined, or the owner name does not match
@@ -127,6 +131,10 @@ def create_project(
   if not project_title:
     project_title = project_data.get('title', None)
 
+  # Get project description from JSON if not supplied
+  if not project_description:
+    project_description = project_data.get('description', None)
+
   # Abort if no project name
   if not project_title:
     logging.error("Project has no title"
@@ -148,7 +156,7 @@ def create_project(
       .format(project_owner, project_title))
     return None
 
-  logging.debug("Project owner is '{}' for project {}"
+  logging.info("Project owner is '{}' for project {}"
     .format(project_owner['name'], project_title))
     
   # FIXME: Notification?
@@ -158,7 +166,7 @@ def create_project(
   # Create project in Kanboard
   new_project_id = kb.create_project(
     name = project_title,
-    description = project_data.get('description', None),
+    description = project_description,
     owner_id = project_owner['id'],
     identifier = project_identifier
   )
