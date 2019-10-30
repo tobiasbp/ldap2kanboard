@@ -282,29 +282,10 @@ def create_project(
         # Set random group member as task_owner
         task_owner = random.choice(group['members'])
 
-        # Add group member to Kanboard project
-        if task_owner['id'] not in assignable_users_by_id:
-          r = kb.add_project_user(
-            project_id = new_project_id,
-            user_id = task_owner['id'],
-            role = 'project-member'
-            )
-        
-          if r:
-            logging.info("Adding user '{}' to project '{}' because of membership of group '{}'"
-              .format(task_owner['name'], project_title, group['name']))
-          else:
-            logging.error("Could not add user '{}' to project '{}' because of membership of group '{}'"
-              .format(task_owner['name'], project_title, group['name']))
-  
-          # Update list of users who can be assigned task in the project
-          assignable_users_by_id = kb.get_assignable_users(
-            project_id = new_project_id
-            )
-            
       else:  
         # Get matching Kanboard user if not a group
         task_owner = users_by_username.get(t['owner'], {})
+      
       
       # FIXME: Should all task owners not be added?
       # If not, you MUST add single users (Non group) through the JSON-file.
@@ -313,6 +294,30 @@ def create_project(
       if not task_owner:
         logging.warning("Task owner '{}' from JSON is not a Kanboard user."
           .format(t['owner']))
+      else:
+
+        # If the task owner is not in the Kanboard project
+        if task_owner['id'] not in assignable_users_by_id:
+          
+          # Add the user to the project
+          r = kb.add_project_user(
+            project_id = new_project_id,
+            user_id = task_owner['id'],
+            role = 'project-member'
+            )
+        
+          if r:
+            logging.info("Adding user '{}' to project '{}'"
+              .format(task_owner['name'], project_title))
+          else:
+            logging.error("Could not add user '{}' to project '{}'"
+              .format(task_owner['name'], project_title))
+
+          # Update list of users who can be assigned tasks in the project
+          assignable_users_by_id = kb.get_assignable_users(
+            project_id = new_project_id
+            )
+
 
 
     # If task owner was not in JSON or parsed to us, or the task owner
