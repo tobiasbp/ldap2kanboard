@@ -3,6 +3,7 @@
 
 import datetime
 import logging
+import random
 import json
 
 import sys
@@ -44,7 +45,7 @@ def create_project(
   Creates a Kanboard project with tasks from a JSON file.
   
   If a task owner is not an assignable Kanboard user, the
-  project owner will be addes as a project-manager and will be
+  project owner will be added as a project-manager and will be
   the owner of the task.
   
   project_file: The JSON file describing the project
@@ -86,6 +87,15 @@ def create_project(
   # A dictionary of users with username as key
   users_by_username = {u['username']:u for u in kb.get_all_users()}
   
+  # Get all Kanboard groups
+  groups_by_name = {g['name']:g for g in kb.get_all_groups() }
+  
+  # Add list of members to groups
+  for group_data in groups_by_name.values():
+    group_data['members'] = kb.get_group_members(
+      group_id = group_data['id']
+      )
+
   # Keep track of latest due date
   latest_due_date = due_date
 
@@ -157,13 +167,19 @@ def create_project(
   project_columns = kb.get_columns(
     project_id = new_project_id
     )
-  
+
+  # Throw an error if we got no list
+  if not project_columns:
+    logging.error("Could not get project columns in project '{}' (ID: {})"
+      .format(project_title, new_project_id))
+  else:
+    pass
+    # FIXME: Should we abort here?
+
   # Create dict of columns by position
   # FIXME: Could be by name?
   project_columns_by_position = {c['position']:c for c in project_columns}
-  
-  #print(project_columns)
-  #print(project_columns_by_position)
+
 
   # Add all users as members of the board
   for u in project_data.get('users', []):
@@ -220,15 +236,31 @@ def create_project(
     # FIXME: If owner is a list?
     task_owner = None
     
-    # Get ownr of all tasks if parsed to this function
+    # Get owner of all tasks if parsed to this function
     # Will override task owners in JSON
     if all_tasks_owner:
       task_owner = users_by_username.get(all_task_owner, {})
 
-    # If owner is specified in JSON
+    # If an owner is specified in JSON
     elif t.get('owner', None):
+      
+      # If the owner is a group name, we will pick a random member
+      # and substitute the owner name with a random member of the group
+      
+      # Try to get a group with the name of the task owner
+      group = groups_by_name.get(t['owner'], None)
+      
+      # Update owner name if a group was found
+      if group:
+        # Get membername if group has users
+        if len(group['members']) > 0:
+          t['owner'] = random.choice(group['members'])['username']
+        
+        # FIXME: Add new user to project if not there 
+
       # Get matching Kanboard user
       task_owner = users_by_username.get(t['owner'], {})
+      
       # Log if there was no matching user
       if not task_owner:
         logging.warning("Task owner '{}' from JSON is not a Kanboard user."
@@ -295,7 +327,7 @@ def create_project(
       # Empty string if no due_date
       task_due_date = ''
 
-    # Task collumn. Default is 1 (Leftmost)
+    # Task collumn. Fallback to 1 (Leftmost)
     task_col = project_columns_by_position.get(t.get('column', '1'), '1')
     
     # Create the task
@@ -307,6 +339,7 @@ def create_project(
       color_id = t.get('color', ''),
       tags = t.get('tags', []),
       date_due = task_due_date,
+      #date_started = task_due_date,
       column_id = task_col['id']
       )
 
