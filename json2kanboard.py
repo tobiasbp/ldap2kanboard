@@ -41,7 +41,8 @@ def create_project(
     project_description = None,
     task_owner = None,
     due_date = None,
-    roles = {}
+    roles = {},
+    placeholders = {}
     ):
   '''
   Creates a Kanboard project with tasks from a JSON file.
@@ -134,6 +135,10 @@ def create_project(
   # Get project description from JSON if not supplied
   if not project_description:
     project_description = project_data.get('description', None)
+
+  # Update project title & description with placeholders 
+  project_title = process_placeholders(project_title, placeholders)
+  project_description = process_placeholders(project_description, placeholders)
 
   # Abort if no project name
   if not project_title:
@@ -391,11 +396,17 @@ def create_project(
     # Task collumn. Fallback to 1 (Leftmost)
     task_col = project_columns_by_position.get(t.get('column', '1'), '1')
     
+    # Update task title and description from placeholders
+    t['title'] = process_placeholders(t.get('title',''), placeholders)
+    t['description'] = process_placeholders(t.get('description',''), placeholders)
+    
     # Create the task
     new_task_id = kb.create_task(
       project_id = new_project_id,
-      title = t.get('title',''),
-      description = t.get('description', ''),
+      #title = t.get('title',''),
+      title = t['title'],
+      #description = t.get('description', ''),
+      description = t['description'],
       owner_id = task_owner.get('id', ''),
       color_id = t.get('color', ''),
       tags = t.get('tags', []),
@@ -414,6 +425,9 @@ def create_project(
     # Loop through subtasks
     for st in t.get('subtasks', []):
       
+      # Precess placeholders in subtask title
+      st['title'] = process_placeholders(st.get('title', ''), placeholders)
+      
       # Create the subtask
       r = kb.create_subtask(
         task_id = new_task_id,
@@ -430,3 +444,16 @@ def create_project(
 
   # FIXME: Update project due date
   #r = kb.update_project(latest_due_date:
+
+def process_placeholders(string_to_process, placeholders):
+  '''
+  Replaces all occurences of keys from dict 'placeholders'
+  in string 'string_to_precess' with values from dict 'placeholders'
+  
+  Returns modified version of string_to_process
+  ''' 
+    # Update placeholders
+  for key, value in placeholders.items():
+    string_to_process = string_to_process.replace(key, value)
+
+  return string_to_process
