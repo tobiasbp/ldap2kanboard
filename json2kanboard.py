@@ -393,14 +393,19 @@ def create_project(
       # Empty string if no due_date
       task_due_date = ''
 
+    
+    ###################
+    # Create task #
+    ###################
+    
     # Task collumn. Fallback to 1 (Leftmost)
     task_col = project_columns_by_position.get(t.get('column', '1'), '1')
-    
+
     # Update task title and description from placeholders
     t['title'] = process_placeholders(t.get('title',''), placeholders)
     t['description'] = process_placeholders(t.get('description',''), placeholders)
     
-    # Create the task
+    # Creat the task
     new_task_id = kb.create_task(
       project_id = new_project_id,
       #title = t.get('title',''),
@@ -421,13 +426,41 @@ def create_project(
     else:
       logging.error("Could not create task '{}' with owner '{}' in project '{}' with id '{}'."
         .format(t['title'], task_owner['name'], project_title, new_project_id))
+      # Abort this iteration
+      continue
+    
+    #############
+    # Add links #
+    #############
+    
+    # Loop through links
+    for l in t.get('links', []):
+      
+      # Add weblink to task
+      r = kb.create_external_task_link(
+        task_id = new_task_id,
+        dependency = "related",
+        type = 'weblink',
+        title = l.get('title', None),
+        url = l.get('url', None),
+        )
+      if r:
+        logging.warning("Added link '{}' to task '{}' in project '{}'"
+          .format(l.get('title', None), t['title'], project_title))
+      else:
+        logging.error("Could not add link '{}' to task '{}' in project '{}'"
+          .format(l.get('title', None), t['title'], project_title))
 
-    # Loop through subtasks
+    ################
+    # Add subtasks #
+    ################
+    
+    # Loop through subtasks 
     for st in t.get('subtasks', []):
-      
-      # Precess placeholders in subtask title
+
+      # Process placeholders in subtask title
       st['title'] = process_placeholders(st.get('title', ''), placeholders)
-      
+
       # Create the subtask
       r = kb.create_subtask(
         task_id = new_task_id,
