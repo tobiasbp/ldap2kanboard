@@ -23,7 +23,9 @@ import ldap3
 import configparser
 '''
 
-from kanboard import Kanboard
+import kanboard
+
+
 
 # Valid user roles in a Kanboard project
 KANBOARD_ROLES = (
