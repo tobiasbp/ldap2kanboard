@@ -79,8 +79,9 @@ def create_project(
   project_file. If no owner is defined, or the owner name does not match
   a Kanboard user, the task will be the project owner.
   
-  due_date = The due date of the project. If a task has the field 'due_date'
-  the value must be an integer. Of it is negative, the due date of the task
+  due_date = The due date of the project as a datetime.date object.
+  If a task definition in the JSON file has a value in the field 'due_date'
+  the value must be an integer. If it is negative, the due date of the task
   is x days before the project due date. If it is positive, the due date
   is x days after the project due date. If the due date of any task is
   after the project due data, the project due date will be set to that date.
@@ -91,9 +92,14 @@ def create_project(
   {'ROLE_MANAGER': 'user_a', 'ROLE_BUTLER': 'user_b'}. A role
   is signified by prefing the role name with 'ROLE_'
   '''
-
+  
+  # FIXME: Check input data
+  #print(type(due_date))
+  
   # FIXME: Make all roles (keys) upper case
 
+  # FIXME: Validate project identifier (CAPS & ints)
+  
   # This user will own all tasks
   all_tasks_owner = task_owner
 
@@ -388,13 +394,14 @@ def create_project(
         latest_due_date = task_due_date
       
       # Convert due date to string
-      task_due_date = task_due_date.isoformat()
+      task_due_date = task_due_date.strftime('%Y-%m-%d')
 
     else:
 
       # Empty string if no due_date
       task_due_date = ''
 
+    # FIXME: Check format of task_due_date
     
     ###################
     # Create task #
@@ -406,13 +413,11 @@ def create_project(
     # Update task title and description from placeholders
     t['title'] = process_placeholders(t.get('title',''), placeholders)
     t['description'] = process_placeholders(t.get('description',''), placeholders)
-    
+
     # Creat the task
     new_task_id = kb.create_task(
       project_id = new_project_id,
-      #title = t.get('title',''),
       title = t['title'],
-      #description = t.get('description', ''),
       description = t['description'],
       owner_id = task_owner.get('id', ''),
       color_id = t.get('color', ''),
@@ -447,7 +452,7 @@ def create_project(
         url = l.get('url', None),
         )
       if r:
-        logging.warning("Added link '{}' to task '{}' in project '{}'"
+        logging.info("Added link '{}' to task '{}' in project '{}'"
           .format(l.get('title', None), t['title'], project_title))
       else:
         logging.error("Could not add link '{}' to task '{}' in project '{}'"
@@ -489,6 +494,6 @@ def process_placeholders(string_to_process, placeholders):
   ''' 
     # Update placeholders
   for key, value in placeholders.items():
-    string_to_process = string_to_process.replace(key, value)
+    string_to_process = string_to_process.replace(key, str(value))
 
   return string_to_process
