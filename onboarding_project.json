@@ -1,19 +1,20 @@
 {
-  "title": "Project title in JSON",
-  "description": "Project description in JSON",
-  "owner": "",
+  "title": "Onboarding: NEW_USER_NAME",
+  "description": "Onboarding of NEW_USER_NAME",
+  "owner": "js",
   "users": [
       {"name": "plj", "role": "project-member"},
-      {"name": "knj", "role": "project-member"}
+      {"name": "knj", "role": "project-member"},
+      {"name": "js", "role": "project-member"}
     ],
   "swimlanes": [
     {"title": "Swimlane A", "desc": "Swimlane description"}
   ],
   "tasks": [
     {
-      "title": "Check oplysninger i brugerdatabasen",
+      "title": "Check oplysninger i brugerdatabasen for NEW_USER_NAME",
       "description": "Check data I brugerdatabasen",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "-7",
       "column": "2",
@@ -28,9 +29,9 @@
       ]
     },
     {
-      "title": "Send intromail",
-      "description": "Check data I brugerdatabasen",
-      "owner": "knj",
+      "title": "Send intromail til NEW_USER_NAME (NEW_USER_PRIVATE_MAIL)",
+      "description": "",
+      "owner": "js",
       "color": "orange",
       "due_date": "-14",
       "column": "2",
@@ -39,9 +40,9 @@
       ]
     },
     {
-      "title": "Opret ny person i pension",
+      "title": "Opret NEW_USER_NAME i pension",
       "description": "Dette kan først ske 30 dage efter fordi?",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "+30",
       "column": "1",
@@ -50,9 +51,9 @@
       ]
     },
     {
-      "title": "Tilføj person i dataløn",
+      "title": "Tilføj NEW_USER_NAME i dataløn",
       "description": "Dette kan først ske 60 dage efter fordi?",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "+60",
       "column": "1",
@@ -61,9 +62,9 @@
       ]
     },
     {
-      "title": "Bekræft salgspris med people manager",
+      "title": "Bekræft salgspris for NEW_USER_NAME med people manager",
       "description": "",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "-7",
       "column": "2",
@@ -74,7 +75,7 @@
     {
       "title": "Facilitér møde vedr. production management v. OK",
       "description": "OBS! Kun grafikere og designere hos Everland",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "-7",
       "column": "2",
@@ -84,9 +85,9 @@
       ]
     },
     {
-      "title": "Opret ny person i Workbook",
+      "title": "Opret NEW_USER_NAME i Workbook",
       "description": "",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "-7",
       "column": "2",
@@ -98,9 +99,9 @@
       ]
     },
     {
-      "title": "Opret ny person i Dataløn",
+      "title": "Opret NEW_USER_NAME i Dataløn",
       "description": "",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "-7",
       "column": "2",
@@ -108,16 +109,16 @@
         "HR"
       ],
       "subtasks": [
-        {"title": "Indhent bankinfo"},
+        {"title": "Indhent bankinfo for NEW_USER_NAME"},
         {"title": "Tilføj feriedage"},
         {"title": "Udregn løn ift. ansættelsesdato"},
         {"title": "Påfør skattedage"}
       ]
     },
     {
-      "title": "Opret ny person i personaleoversigten",
+      "title": "Opret NEW_USER_NAME i personaleoversigten",
       "description": "",
-      "owner": "knj",
+      "owner": "js",
       "color": "orange",
       "due_date": "-7",
       "column": "2",
@@ -126,9 +127,9 @@
       ]
     },
     {
-      "title": "Opret ny person i financefill",
+      "title": "Opret NEW_USER_NAME i financefill",
       "description": "",
-      "owner": "knj",
+      "owner": "miw",
       "color": "dark_grey",
       "due_date": "-7",
       "column": "2",
@@ -137,9 +138,9 @@
       ]
     },
     {
-      "title": "Booke intro til pipelinestyring",
+      "title": "Booke intro til pipelinestyring for NEW_USER_NAME",
       "description": "Denne task gælder kun for project managers",
-      "owner": "knj",
+      "owner": "miw",
       "color": "dark_grey",
       "due_date": "-7",
       "column": "2",
@@ -149,9 +150,9 @@
       ]
     },
     {
-      "title": "Klargør skrivebord til ny person",
+      "title": "Klargør skrivebord til NEW_USER_NAME",
       "description": "Denne sag afhænger af, at people manageren finder et bord",
-      "owner": "knj",
+      "owner": "helpdesk",
       "color": "purple",
       "due_date": "-7",
       "column": "1",
@@ -160,20 +161,23 @@
         "Kontrapunkt"
       ],
       "subtasks": [
-        {"title": "Hvor skal den nye person sidde?"},
+        {"title": "Hvor skal NEW_USER_NAME person sidde?"},
         {"title": "Rengør bord"},
         {"title": "Læg blok"},
         {"title": "Læg Post-it"},
         {"title": "Læg skriveredskaber"},
         {"title": "Læg \"Tone of voice\" 2 & 3"},
         {"title": "Læg Æble"},
-        {"title": "Læg lille håndskreven hilsen"}
+        {"title": "Læg lille håndskreven hilsen til NEW_USER_NAME"},
+        {"title": "Hent blomster"},
+        {"title": "Sæt blomster på NEW_USER_NAME bord"}
+
       ]
     },
     {
-      "title": "Praktisk introduktion til huset",
+      "title": "Praktisk introduktion af NEW_USER_NAME til huset",
       "description": "",
-      "owner": "knj",
+      "owner": "helpdesk",
       "color": "purple",
       "due_date": "+7",
       "column": "1",
@@ -184,29 +188,27 @@
         {"title": "Udlever fysisk nøgle"},
         {"title": "Udlever kode eller brik (RFID) til alarm"},
         {"title": "Gennemgang af alarmsystem"},
-        {"title": "Gennemgang af brandsikkerhed"},
-        {"title": "Bestil blomster"}
+        {"title": "Gennemgang af brandsikkerhed"}
       ]
     },
     {
-      "title": "Hent blomster",
+      "title": "Bestil velkomst-blomster til NEW_USER_NAME",
       "description": "Blomster kan bestilles/hentes/bringes. Se nedenstående link",
-      "owner": "knj",
+      "owner": "helpdesk",
       "color": "purple",
-      "due_date": "0",
-      "column": "1",
+      "due_date": "-7",
+      "column": "2",
       "tags": [
         "Helpdesk"
       ],
-      "subtasks": [
-        {"title": "Hent blomster"},
-        {"title": "Sæt blomster på ny persons bord"}
+      "links": [
+        {"title": "Blomsterleverandører", "url": "https://sites.google.com/kontrapunkt.com/intranet/huset/leverand%C3%B8rer#h.p_pjhJy3-78heC"}
       ]
     },
     {
-      "title": "Billede til website",
+      "title": "Billede til website af NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "stkw",
       "color": "pink",
       "due_date": "+7",
       "column": "2",
@@ -214,15 +216,15 @@
         "Communication"
       ],
       "subtasks": [
-        {"title": "Skal der et profilbillede på websitet?"},
-        {"title": "Tag billede af ny person"},
-        {"title": "Opdater website med billede af ny person"}
+        {"title": "Skal der et profilbillede på websitet af NEW_USER_NAME?"},
+        {"title": "Tag billede af NEW_USER_NAME"},
+        {"title": "Opdater website med billede af NEW_USER_NAME"}
       ]
     },
     {
-      "title": "Annoncér ny person eksternt",
+      "title": "Annoncér NEW_USER_NAME eksternt",
       "description": "",
-      "owner": "knj",
+      "owner": "stkw",
       "color": "pink",
       "due_date": "+7",
       "column": "2",
@@ -230,19 +232,18 @@
         "Communication"
       ],
       "subtasks": [
-        {"title": "Skriv tekst om ny person?"},
-        {"title": "Få fat i billede af ny person"},
-        {"title": "Få tekst om ny person godkendt hos people manager"},
+        {"title": "Skriv tekst om NEW_USER_NAME"},
+        {"title": "Få fat i billede af NEW_USER_NAME"},
+        {"title": "Få tekst om NEW_USER_NAME godkendt hos people manager"},
         {"title": "Post på Linked-in"},
         {"title": "Post på Facebook"},
-        {"title": "Post på eget website"},
-        {"title": "Post i eget chat room \"GRP - People\""}
+        {"title": "Post på eget website"}
       ]
     },
     {
-      "title": "Sæt rettigheder i Adobe Cloud",
-      "description": "Giv brugeren adgang til de produkter de skal bruge",
-      "owner": "knj",
+      "title": "Sæt rettigheder i Adobe Cloud for NEW_USER_NAME",
+      "description": "Giv NEW_USER_NAME adgang til de relevante produkter",
+      "owner": "plj",
       "color": "green",
       "due_date": "+5",
       "column": "1",
@@ -250,12 +251,12 @@
         "IT"
       ],
       "subtasks": [
-        {"title": "Har den nye person oprettet en Adobe-konto?"},
-        {"title": "Tilegen rettigheder til brugeren hos Adobe"}
+        {"title": "Har NEW_USER_NAME person oprettet en Adobe-konto?"},
+        {"title": "Tilegn rettigheder til brugeren hos Adobe"}
       ]
     },
     {
-      "title": "Klargør computer til ny person",
+      "title": "Klargør computer til NEW_USER_NAME",
       "description": "Afhængig af at der er blever valgt en computer",
       "owner": "knj",
       "color": "green",
@@ -268,7 +269,7 @@
         {"title": "Kryptér maskine med FileVault"},
         {"title": "Sæt styresystem til engelsk"},
         {"title": "Opsæt WIFI"},
-        {"title": "Lav konto til den nye bruger på maskinen"},
+        {"title": "Lav konto til NEW_USER_NAME (NEW_USER_UID) på maskinen"},
         {"title": "Lav admin-konto \"kpadmin\""},
         {"title": "Slå brug af .DS_Store filer fra på netværksdrev"},
         {"title": "Sørg for, at packet signing fra på ældre MacOS"},
@@ -303,20 +304,20 @@
       ]
     },
     {
-      "title": "Udlever login & password og Google-2FA-kode til ny bruger",
+      "title": "Udlever login & password og Google-2FA-kode til ny NEW_USER_NAME",
       "description": "",
       "owner": "knj",
       "color": "green",
-      "due_date": "+5",
+      "due_date": "0",
       "column": "1",
       "tags": [
         "IT"
       ]
     },
     {
-      "title": "Opdater brugers password",
-      "description": "IT kender ikke brugerens password. Lav et.",
-      "owner": "knj",
+      "title": "Opdater password for NEW_USER_NAME",
+      "description": "IT kender ikke NEW_USER_NAME password. Lav et.",
+      "owner": "plj",
       "color": "green",
       "due_date": "-14",
       "column": "2",
@@ -330,9 +331,9 @@
       ]
     },
     {
-      "title": "Hardware til den nye person",
+      "title": "Hardware til NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "it-support",
       "color": "green",
       "due_date": "-14",
       "column": "2",
@@ -350,9 +351,9 @@
       ]
     },
         {
-      "title": "Opret ny person i Extensis Team Sync",
+      "title": "Opret NEW_USER_NAME i Extensis Team Sync",
       "description": "",
-      "owner": "knj",
+      "owner": "plj",
       "color": "green",
       "due_date": "-7",
       "column": "2",
@@ -361,31 +362,31 @@
       ]
     },
     {
-      "title": "Opret ny person i MS/Office 365",
+      "title": "Opret NEW_USER_NAME i MS/Office 365",
       "description": "",
-      "owner": "knj",
+      "owner": "plj",
       "color": "green",
       "due_date": "-7",
-      "column": "1",
+      "column": "2",
       "tags": [
         "IT"
       ]
     },
     {
-      "title": "Opret dørkode eller gør brik (RFID) klar",
+      "title": "Opret dørkode eller gør brik (RFID) klar til NEW_USER_NAME",
       "description": "Giv kode/brik til helpdesk som står for udlevering",
-      "owner": "knj",
+      "owner": "plj",
       "color": "green",
       "due_date": "-14",
-      "column": "1",
+      "column": "2",
       "tags": [
         "IT"
       ]
     },
     {
-      "title": "Telefon til ny person",
+      "title": "Telefon til NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "plj",
       "color": "green",
       "due_date": "-14",
       "column": "2",
@@ -397,24 +398,24 @@
         {"title": "Skal der porteres et telefon-nr nummer?"},
         {"title": "Bestil portering af telefon-nr hvis relevant"},
         {"title": "Opdater brugers telen-nr. i brugerdatabasen hvis ændret"},
-        {"title": "Udlever telefon"}
+        {"title": "Udlever telefon til bruger"}
       ]
     },
     {
-      "title": "Opret ny person i Float",
-      "description": "Bed Nille om at oprette den nye person i Float",
-      "owner": "knj",
+      "title": "Opret NEW_USER_NAME i Float",
+      "description": "Bed Nille om at oprette NEW_USER_NAME person i Float",
+      "owner": "plj",
       "color": "green",
       "due_date": "-7",
-      "column": "1",
+      "column": "2",
       "tags": [
         "IT"
       ]
     },
     {
-      "title": "Buddy-opgaver får ny person",
-      "description": "",
-      "owner": "knj",
+      "title": "Buddy-opgaver for NEW_USER_NAME",
+      "description": "Sørg for at buddy-opgaver udføres",
+      "owner": "ROLE_MANAGER",
       "color": "lime",
       "due_date": "0",
       "column": "1",
@@ -424,16 +425,16 @@
       ],
       "subtasks": [
         {"title": "Tag imod første arbejdsdag"},
-        {"title": "Deltag i morgen mad første arbejdsdag"},
+        {"title": "Deltag i morgenmad første arbejdsdag"},
         {"title": "Sørg for frokostselskab i den første uge"},
-        {"title": "Gennemfør presentationsrunde i huset"},
-        {"title": "Sørg for at den nye person deltager i team-møder"}
+        {"title": "Gennemfør presentationsrunde af NEW_USER_NAME i huset"},
+        {"title": "Sørg for at NEW_USER_NAME deltager i team-møder"}
       ]
     },
     {
-      "title": "Annoncér ny person til huset i Google Chat",
+      "title": "Annoncér NEW_USER_NAME til huset i Google Chat",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-7",
       "column": "2",
@@ -442,9 +443,9 @@
       ]
     },
     {
-      "title": "Indkalde alle people managers til første fredagsbar",
+      "title": "Indkalde alle people managers til første fredagsbar med NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
@@ -453,9 +454,9 @@
       ]
     },
     {
-      "title": "Tilføj teammedlemmer til morgenmad den første dag",
+      "title": "Tilføj teammedlemmer til morgenmad den første dag med NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
@@ -464,9 +465,9 @@
       ]
     },
     {
-      "title": "Præsenter Kontrapunkt-cases",
+      "title": "Præsenter Kontrapunkt-cases for NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "+14",
       "column": "2",
@@ -482,9 +483,9 @@
       ]
     },
     {
-      "title": "Facalitér intro til søsterselskab",
+      "title": "Facalitér intro til søsterselskab for NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "+14",
       "column": "2",
@@ -493,9 +494,9 @@
       ]
     },
     {
-      "title": "Bestil visitkort til ny person hvis relevant",
+      "title": "Bestil visitkort til NEW_USER_NAME hvis relevant",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "+7",
       "column": "2",
@@ -504,9 +505,9 @@
       ]
     },
     {
-      "title": "Underskriv kontrakter",
+      "title": "Underskriv kontrakter med NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "+7",
       "column": "2",
@@ -514,19 +515,31 @@
         "People manager"
       ],
       "subtasks": [
-        {"title": "Underskriv NDA"},
-        {"title": "Læg NDA i mearbejdermappen så konti oprettes"},
         {"title": "Underskriv ansættelseskontrakt"},
         {"title": "Læg ansættelseskontrakt i medarbejdermappen"},
         {"title": "Underskriv consent"},
-        {"title": "Læg consent i medarbejdermappen"},
-        {"title": "Udlever Kontrapunkt booklet i forbindelse med underskrift"}
+        {"title": "Læg consent i medarbejdermappen"}
       ]
     },
     {
-      "title": "Send privat begejstringsmail til den nye person",
+      "title": "Underskriv NDA for ny NEW_USER_NAME",
+      "description": "IT kan ikke gøre udstyr etc. klar før dette er sket.",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-21",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ],
+      "subtasks": [
+        {"title": "Underskriv NDA"},
+        {"title": "Læg NDA i NEW_USER_NAMEs medarbejdermappe så konti oprettes"}
+      ]
+    },
+    {
+      "title": "Udlever Kontrapunkt booklet til NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
@@ -535,9 +548,9 @@
       ]
     },
     {
-      "title": "Find en plads til den nye person",
+      "title": "Send privat begejstringsmail til NEW_USER_NAME (NEW_USER_PRIVATE_MAIL)",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
@@ -546,9 +559,20 @@
       ]
     },
     {
-      "title": "Planlæg ny persons første dag",
+      "title": "Find en plads til NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager"
+      ]
+    },
+    {
+      "title": "Planlæg NEW_USER_NAMEs første dag",
+      "description": "",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-7",
       "column": "2",
@@ -557,9 +581,9 @@
       ]
     },
     {
-      "title": "Planlæg faglige aktiviteter for ny person i den første uge",
+      "title": "Planlæg faglige aktiviteter for NEW_USER_NAME i den første uge",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
@@ -568,9 +592,9 @@
       ]
     },
     {
-      "title": "Arranger 1-to-1-talks for de første fire uger",
+      "title": "Arranger 1-to-1-talks for de første fire uger med NEW_USER_NAME",
       "description": "",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
@@ -579,9 +603,9 @@
       ]
     },
     {
-      "title": "Book mødelokaler for 30-, 60- & 90-dagssamtaler",
+      "title": "Book mødelokaler for 30-, 60- & 90-dagssamtaler med NEW_USER_NAME",
       "description": "Møderne bør være oprettede i kalenderen. Inviter mødelokale.",
-      "owner": "knj",
+      "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
