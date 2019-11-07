@@ -3,9 +3,6 @@
   "description": "Onboarding of NEW_USER_NAME",
   "owner": "js",
   "users": [
-      {"name": "plj", "role": "project-member"},
-      {"name": "knj", "role": "project-member"},
-      {"name": "js", "role": "project-member"}
     ],
   "swimlanes": [
     {"title": "Swimlane A", "desc": "Swimlane description"}
