@@ -93,10 +93,9 @@ def create_project(
   {'ROLE_MANAGER': 'user_a', 'ROLE_BUTLER': 'user_b'}. A role
   is signified by prefing the role name with 'ROLE_'
   
-  keys: If a task has a value in keys, it will only be added to the 
-  kanboard project if the same key is in the key list supplied to
-  json2kanboard. Keys are case sensitive. Having a single key, creates
-  the task.
+  keys: If a JSON task has a value(s) in keys, the task will only be
+  added to the kanboard project if ALL the keys passed to this function
+  are in the set of JSON task keys. Keys are case insensitive. 
   '''
   
   # FIXME: Check input data
@@ -284,20 +283,19 @@ def create_project(
     # Process keys (if any in JSON)
     if t.get('keys', None):
 
-      # FIXME: Make all keys lower case
-
+      # JSON keys to lower case set
+      t['keys'] = set([ k.lower() for k in t['keys'] ])
+      
+      # request keys to lower case set
+      keys = set([ k.lower() for k in keys ])
 
       # Get set of matching keys
-      matching_keys = (
-        set.intersection(
-          set(t.get('keys', [])),
-          set(keys)
-          )
-        )
+      matching_keys = set.intersection(t['keys'], keys)
+
 
       # Abort if matching keys are not equal to 'our' keys
       # That is, 'we' must match ALL keys in JSON to create the task 
-      if matching_keys != set(keys):
+      if matching_keys != keys:
         logging.debug("Not creating task '{}' in project '{}' because of missing key"
           .format(t['title'], project_title))
         
