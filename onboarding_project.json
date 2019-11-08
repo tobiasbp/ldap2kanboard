@@ -70,6 +70,17 @@
       ]
     },
     {
+      "title": "Check at møder er oprettet for NEW_USER_NAME",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
       "title": "Facilitér møde vedr. production management v. OK",
       "description": "OBS! Kun grafikere og designere hos Everland",
       "owner": "js",
