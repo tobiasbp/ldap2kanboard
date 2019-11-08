@@ -1,0 +1,293 @@
+{
+  "title": "My tasks: USER_NAME",
+  "description": "Personal tasks for USER_NAME",
+  "owner": "",
+  "users": [
+    {"name": "ROLE_OWNER", "role": "project-manager"} 
+    ],
+  "swimlanes": [
+    {"title": "Swimlane A", "desc": "Swimlane description"}
+  ],
+  "tasks": [
+    {
+      "title": "Familiarize yourself with Google Hangouts Chat",
+      "description": "Familiarize yourself with Google Hangouts Chat",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on use of Google Hangouts Chat", "url": "https://tinyurl.com/yb92l3m7"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Learn how to access the file server",
+      "description": "Familiarize yourself with use of the file server",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on use of file server", "url": "https://tinyurl.com/yd6duryh"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Familiarize yourself with the Kontrapunkt Group intranet",
+      "description": "Familiarize yourself with use of the intranet",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "About the intranet", "url": "https://tinyurl.com/ybu6ve87"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Read the intranet page on IT policy (Danish)",
+      "description": "Familiarize yourself with the IT policy",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "IT policy (Danish)", "url": "https://tinyurl.com/y9gpzel4"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Familiarize yourself with our corporate fonts",
+      "description": "Familiarize yourself with the corporate fonts",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on the corporate fonts", "url": "https://tinyurl.com/y76bl7h6"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Learn about your account life cycle",
+      "description": "Learn about your account life cycle. What happens to your data.",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on account life cycle", "url": "http://tinyurl.com/y6mmf7pg"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Learn about the use of Google services",
+      "description": "Learn about the use of Google services.",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on Google services (Danish)", "url": "https://tinyurl.com/ybwamsco"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Make sure you know what to do in case of an emergency",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on emergency situations", "url": "https://tinyurl.com/y5zzpxro"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "freelancer", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Make sure your personal data are correct",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on how to update your personal data", "url": "https://tinyurl.com/yyg5gwjo"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ]
+    },
+    {
+      "title": "Send bank info to HR",
+      "description": "Send an email with bank info to hr@kontrapunkt.com",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Get you key and keycode",
+      "description": "Get you key and keycode at the reception.",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Learn how to access the accounting system WorkBook",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "How to use WorkBook (Danish)", "url": "https://tinyurl.com/yanwrheg"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Make sure you have an e-boks",
+      "description": "Kontrapunkt can not pay you if you don't have an e-boks.",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Read about e-boks", "url": "https://www.e-boks.dk"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Create an AdobeID if relevant",
+      "description": "Create an AdobeID by logging in with your Google account.",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Login to Adobe here", "url": "https://tinyurl.com/yahz2py2'"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Consider getting massages at work",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "About massage", "url": "https://tinyurl.com/yb8hy6qm"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Read the freelance guide",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "The freelance guide", "url": "https://tinyurl.com/y7hb8uzg"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "freelancer", "Kontrapunkt copenhagen"
+      ]
+    }
+  ]
+}
+
+
