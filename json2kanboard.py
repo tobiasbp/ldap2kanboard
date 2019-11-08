@@ -44,7 +44,8 @@ def create_project(
     task_owner = None,
     due_date = None,
     roles = {},
-    placeholders = {}
+    placeholders = {},
+    keys = []
     ):
   '''
   Creates a Kanboard project with tasks from a JSON file.
@@ -91,10 +92,18 @@ def create_project(
   and match that role with a user (Known only by the script).
   {'ROLE_MANAGER': 'user_a', 'ROLE_BUTLER': 'user_b'}. A role
   is signified by prefing the role name with 'ROLE_'
+  
+  keys: If a task has a value in keys, it will only be added to the 
+  kanboard project if the same key is in the key list supplied to
+  json2kanboard. Keys are case sensitive
   '''
   
   # FIXME: Check input data
-  #print(type(due_date))
+
+  # FIXME: Validate project identifier (CAPS & ints)
+
+  # Keys must be a list
+  assert type(keys) == type([])
   
   # Make all roles values (User ids) are strings
   for k in roles.keys():
@@ -104,7 +113,6 @@ def create_project(
   for k in placeholders.keys():
     placeholders[k] = str(placeholders[k])
   
-  # FIXME: Validate project identifier (CAPS & ints)
   
   # This user will own all tasks
   all_tasks_owner = task_owner
@@ -259,8 +267,10 @@ def create_project(
       
     # We have no assignable users, so fall back to empty dict
     assignable_users_by_id = {}
-
-  # Create tasks
+  
+  ################
+  # Create tasks #
+  ################
   for t in project_data['tasks']:
     
     # Abort if task has no title
@@ -268,6 +278,26 @@ def create_project(
       logging.error("Can not create task in project '{}' because of missing title"
         .format(new_project_id))
       continue
+
+    # Don't create task if is needs a key, and
+    # a matching one is not supplied
+    if t.get('keys', None):
+
+      # FIXME: Make all keys lower case
+
+      # Get matching keys
+      matching_keys = (
+        set.intersection(
+          set(t.get('keys', [])),
+          set(keys)
+          )
+        )
+      if not matching_keys:
+        logging.debug("Not creating task '{}' in project '{}' because of missing key"
+          .format(t['title'], project_title))
+        
+        # Abort this iteration of the task loop
+        continue
 
     # Assume no owner
     task_owner = None
@@ -409,9 +439,9 @@ def create_project(
 
     # FIXME: Check format of task_due_date
     
-    ###################
+    ###############
     # Create task #
-    ###################
+    ###############
     
     # Task collumn. Fallback to 1 (Leftmost)
     task_col = project_columns_by_position.get(t.get('column', '1'), '1')
@@ -449,6 +479,8 @@ def create_project(
     # Loop through links
     for l in t.get('links', []):
       
+      # FIXME: Warn if key (url) is not in link. Could be 'URL'
+
       # Add weblink to task
       r = kb.create_external_task_link(
         task_id = new_task_id,
