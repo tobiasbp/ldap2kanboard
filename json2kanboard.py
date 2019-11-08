@@ -66,7 +66,7 @@ def create_project(
   If not set, the owner will be the Kanboard username in the field 'owner'
   in the project_file. If the owner is not a valid Kanboard user, the project
   will not be created. If owner is not a Kanboard user (or it is not set)
-  the project will not be created.
+  the project will not be created. Owner can no be a role as seen in 'roles'
   
   project_title: The title of the project.
   If unset, it will be read from the field 'title' in the project_file.
@@ -96,8 +96,14 @@ def create_project(
   # FIXME: Check input data
   #print(type(due_date))
   
-  # FIXME: Make all roles (keys) upper case
-
+  # Make all roles values (User ids) are strings
+  for k in roles.keys():
+    roles[k] = str(roles[k])
+  
+  # Make sure all placeholder values are strings
+  for k in placeholders.keys():
+    placeholders[k] = str(placeholders[k])
+  
   # FIXME: Validate project identifier (CAPS & ints)
   
   # This user will own all tasks
@@ -280,14 +286,14 @@ def create_project(
       else:
         # Set the user name based on the role
         t['owner'] = roles.get(role_name, None)
-        logging.debug("Mapping role '{}' to task owner '{}' in project '{}'"
+        logging.info("Mapping role '{}' to task owner '{}' in project '{}'"
           .format(role_name, t['owner'], project_title))
 
 
     # Get owner of all tasks if parsed to this function
     # Will override task owners in JSON
     if all_tasks_owner:
-      task_owner = users_by_username.get(all_task_owner, {})
+      task_owner = users_by_username.get(all_tasks_owner, {})
 
     # If an owner is specified in JSON
     elif t.get('owner', None):
