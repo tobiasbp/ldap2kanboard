@@ -22,12 +22,18 @@
       "subtasks": [
         {"title": "Subtask A"},
         {"title": "Subtask B"}
+      ],
+      "links": [
+        {"title": "Kanboard", "url": "https://www.kanboard.org"}
+      ],
+      "keys": [
+        "key1", "key2"
       ]
     },
     {
       "title": "Task B",
       "description": "Task description",
-      "owner": "user_b",
+      "owner": "ROLE_MANAGER",
       "color": "red",
       "tags": [
         "Tag A",

@@ -31,5 +31,6 @@ json2kanboard.create_project(
   project_title = "TEST_PROJECT",
   project_identifier = "TEST_PROJECT_ID",
   due_date = datetime.date(2020, 1, 1),
-  roles = roles
+  roles = roles,
+  keys = ['key1']
   )
