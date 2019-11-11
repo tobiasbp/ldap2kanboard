@@ -83,6 +83,7 @@ con.search(
     'uidNumber',
     USER_START_DATE_FIELD,
     USER_END_DATE_FIELD,
+    'homePhone',
     'o',
     'title',
     'mail',
@@ -197,6 +198,12 @@ for u in con.entries:
 
   # User's start date
   u_start_date = datetime.date(u[USER_START_DATE_FIELD].value)
+  
+  # User's end date as string
+  if u[USER_END_DATE_FIELD]:
+    u_end_date = datetime.date(u[USER_END_DATE_FIELD].value).strftime('%d-%m-%Y')
+  else:
+    u_end_date = "None"
 
   # If the user's start date is in the future
   if u_start_date > now:
@@ -229,8 +236,10 @@ for u in con.entries:
       'NEW_USER_TYPE': u.employeeType,
       'NEW_USER_COMPANY': u.o,
       'NEW_USER_START_DATE': u_start_date.strftime('%d-%m-%Y'),
+      'NEW_USER_END_DATE': u_end_date,
       'NEW_USER_PRIVATE_MAIL': u.fdPrivateMail,
-      'NEW_USER_WORK_MAIL': u.mail
+      'NEW_USER_WORK_MAIL': u.mail,
+      'NEW_USER_PRIVATE_PHONE': u.homePhone.value
       }
 
     # Pattern for extracting uid from a DN
@@ -260,10 +269,12 @@ for u in con.entries:
     description = (
       "* Name: NEW_USER_NAME (NEW_USER_UID)\n" +
       "* Private email: NEW_USER_PRIVATE_MAIL\n" +
+      "* Private phone: NEW_USER_PRIVATE_PHONE\n" +
       "* Work email: NEW_USER_WORK_MAIL\n" +
       "* Company: NEW_USER_COMPANY\n" +
       "* Title: NEW_USER_TITLE\n" +
       "* Start date: NEW_USER_START_DATE\n" +
+      "* End date: NEW_USER_END_DATE\n" +
       "* Type: NEW_USER_TYPE\n" +
       "* People manager: NEW_USER_MANAGER_NAME"
       )
@@ -326,6 +337,7 @@ for u in con.entries:
       .format(u.cn, u.uid, u.employeeType, u_days_left))
 
     # The user's end date
+    u_start_date = datetime.date(u[USER_START_DATE_FIELD].value)
     u_end_date = datetime.date(u[USER_END_DATE_FIELD].value)
 
     # Assume no roles
@@ -338,6 +350,7 @@ for u in con.entries:
       'USER_TITLE': u.title.value,
       'USER_TYPE': u.employeeType.value,
       'USER_COMPANY': u.o.value,
+      'USER_START_DATE': u_start_date.strftime('%d-%m-%Y'),
       'USER_END_DATE': u_end_date.strftime('%d-%m-%Y'),
       'USER_PRIVATE_MAIL': u.fdPrivateMail.value,
       'USER_WORK_MAIL': u.mail.value
@@ -373,6 +386,7 @@ for u in con.entries:
       "* Work email: USER_WORK_MAIL\n" +
       "* Company: USER_COMPANY\n" +
       "* Title: USER_TITLE\n" +
+      "* Start date: USER_END_DATE\n" +
       "* End date: USER_END_DATE\n" +
       "* Type: USER_TYPE\n" +
       "* People manager: USER_MANAGER_NAME"
@@ -381,6 +395,12 @@ for u in con.entries:
     #print(roles)
     #print(placeholders)
     #print(project_identifier)
+
+    # Keys used for matching tasks
+    keys = [
+      u.employeeType.value,
+      # str(u.o)
+    ]
 
     # Create the kanboard project
     json2kanboard.create_project(
@@ -405,7 +425,7 @@ for u in con.entries:
 for u in con.entries:
 
   # Demo: Only create for this user
-  if u.uid != 'bba':
+  if u.uid != 'plj':
     continue
 
   # Identifier for users personal project
@@ -445,8 +465,10 @@ for u in con.entries:
     }
 
   # Start date is now if start date is in the past
-  u_start_date = max(now, u[USER_START_DATE_FIELD].value)
-  
+  u_start_date = max(
+    datetime.now(timezone.utc),
+    u[USER_START_DATE_FIELD].value
+    )
 
   # Create the kanboard project
   json2kanboard.create_project(
