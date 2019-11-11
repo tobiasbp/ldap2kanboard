@@ -1,0 +1,394 @@
+{
+  "title": "Offboarding: USER_NAME",
+  "description": "Offboarding of USER_NAME",
+  "owner": "js",
+  "users": [
+    ],
+  "swimlanes": [
+    {"title": "Swimlane A", "desc": "Swimlane description"}
+  ],
+  "tasks": [
+    {
+      "title": "Modtag fysisk nøgle fra USER_NAME",
+      "description": "",
+      "owner": "helpdesk",
+      "color": "purple",
+      "due_date": "0",
+      "column": "1",
+      "tags": [
+        "Helpdesk"
+      ],
+      "keys": [
+      ],
+      "subtasks": [
+        {"title": "Modtag nøgle"},
+        {"title": "Opdater nøgleskema"}
+      ]
+    },
+    {
+      "title": "Check kalender-events i forbindelse med USER_NAMEs sidste dag",
+      "description": "Hjælp til oprydning af bord og reol (cleares med teamleder)",
+      "owner": "helpdesk",
+      "color": "purple",
+      "due_date": "-21",
+      "column": "2",
+      "tags": [
+        "Helpdesk"
+      ],
+      "keys": [
+      ],
+      "subtasks": [
+        {"title": "Er sidste dag korrekt i fælleskalender"},
+        {"title": "Er sidste dag korrekt i people managers kalender"}
+      ]
+    },
+    {
+      "title": "Sæt sidste dag for USER_NAME i WorkBook",
+      "description": "Opdater dato, sår USER_NAME ikke kan logge på WorkBook efter sidste arbejdsdag.",
+      "owner": "js",
+      "color": "dark_grey",
+      "due_date": "1",
+      "column": "2",
+      "tags": [
+        "Finance"
+      ]
+    },
+    {
+      "title": "Inaktiver konto for USER_NAME i WorkBook",
+      "description": "Inaktiver bruger for USER_NAME i WorkBook sp vi ikke skal betale for en licens.",
+      "owner": "js",
+      "color": "dark_grey",
+      "due_date": "1",
+      "column": "1",
+      "tags": [
+        "Finance"
+      ]
+    },
+    {
+      "title": "Slutafregning i Dataløn for USER_NAME",
+      "description": "",
+      "owner": "js",
+      "color": "dark_grey",
+      "due_date": "-7",
+      "column": "1",
+      "tags": [
+        "Finance"
+      ],
+      "subtasks": [
+        {"title": "Spørg USER_NAME om hvor mange feriedage de har brugt i afslutningsmåned"},
+        {"title": "Check USER_NAMEs af take away fra køkkenet"},
+        {"title": "Check om USER_NAMEs har købt IT-udstyr af Kontrapunkt "},
+        {"title": "Indtast data i Dataløn"}
+      ]
+    },
+    {
+      "title": "Slutafregning i Feriekonto for USER_NAME",
+      "description": "Denne er afhængig af subtask i Dataløn",
+      "owner": "js",
+      "color": "dark_grey",
+      "due_date": "-7",
+      "column": "1",
+      "tags": [
+        "Finance"
+      ]
+    },
+    {
+      "title": "Slutafregning pendlerkort for USER_NAME",
+      "description": "",
+      "owner": "js",
+      "color": "dark_grey",
+      "due_date": "-28",
+      "column": "2",
+      "tags": [
+        "Finance"
+      ]
+    },
+    {
+      "title": "Opdatering af forecast/target for USER_NAME",
+      "description": "",
+      "owner": "miw",
+      "color": "dark_grey",
+      "due_date": "-28",
+      "column": "2",
+      "tags": [
+        "Finance"
+      ]
+    },
+    {
+      "title": "Bed USER_NAME om at udfylde exit questionaire",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-21",
+      "column": "2",
+      "tags": [
+        "HR"
+      ],
+      "subtasks": [
+        {"title": "Check at questionaire er udfyldt"},
+        {"title": "Læs svar sammen med people manager"}
+      ]
+    },
+    {
+      "title": "Arkivering af opsigelse for USER_NAME",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "HR"
+      ],
+      "subtasks": [
+        {"title": "Indhent opsigelse fra people manager"},
+        {"title": "Læg opsigelse i personalemappen for USER_NAME"}
+      ]
+    },
+    {
+      "title": "Opdater USER_NAME i personaleoversigt",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "1",
+      "column": "1",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Evt. opsigelse af kunde- eller konkurrenceklausul for USER_NAME",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-21",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Sørg for at people people manager for USER_NAME ved at Google-data slettes efter 180 dage",
+      "description": "Data i Google slettes efter 180 dage. Sørg for at People manager er klar over det.",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-21",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Afslut offboarding for USER_NAME",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "7",
+      "column": "1",
+      "tags": [
+        "HR"
+      ],
+      "subtasks": [
+        {"title": "Bekræft at alle opgaver med offboarding af USER_NAME er løste."},
+        {"title": "Luk offboarding-projekt for USER_NAME"}
+      ]
+
+    },
+
+    {
+      "title": "Besked til pensionsselskab i forbindelse med USER_NAME opsigelse",
+      "description": "",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Evt. henvisning til bonusskriv på intranet omkring deltagelse i bonusordning ved fratrædelse",
+      "description": "Kan vi få et link?",
+      "owner": "js",
+      "color": "orange",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "HR"
+      ]
+    },
+    {
+      "title": "Nedlæg konti for USER_NAME i diverse systemer",
+      "description": "",
+      "owner": "plj",
+      "color": "green",
+      "due_date": "1",
+      "column": "2",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Luk for adgang til 'Float' for USER_NAME"},
+        {"title": "Luk for adgang til 'Adobe' for USER_NAME"},
+        {"title": "Luk for adgang til 'Extensis' for USER_NAME"},
+        {"title": "Luk for adgang til 'Office 365' for USER_NAME"},
+        {"title": "Luk for adgang til 'Mediabank' for USER_NAME"},
+        {"title": "Luk for adgang til '1Password' for USER_NAME"},
+        {"title": "Luk for adgang til '??' for USER_NAME"},
+        {"title": "Check at USER_NAME er låst i brugerdatabase"}
+      ]
+    },
+    {
+      "title": "Evt. afbestilling af internetadgang for USER_NAME",
+      "description": "",
+      "owner": "plj",
+      "color": "green",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Evt. afbestilling af mobilnummer for USER_NAME",
+      "description": "",
+      "owner": "plj",
+      "color": "green",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "IT"
+      ]
+    },
+    {
+      "title": "Gennemgang af returneret udstyr med USER_NAME",
+      "description": "",
+      "owner": "plj",
+      "color": "green",
+      "due_date": "",
+      "column": "2",
+      "tags": [
+        "IT"
+      ],
+      "subtasks": [
+        {"title": "Modtag computer fra USER_NAME"},
+        {"title": "Lav timemachine-backup af computer brugt af USER_NAME"},
+        {"title": "Slet alle data og geninstaller macOS på computer brugt af USER_NAME"},
+        {"title": "Modtag telefon fra USER_NAME"},
+        {"title": "Sørg for at USER_NAME har frakoblet sit Apple ID fra evt. iPhone"},
+        {"title": "Sørg for at USER_NAME har frakoblet sit Apple ID fra Apple computer"},
+        {"title": "Opdater assets-database for udstyr brugt af USER_NAME"},
+        {"title": "Undersøg hvilket udstyr der er udlevert til USER_NAME ved at se i assets-database"}
+      ]
+    },
+    {
+      "title": "Overdragelse af igangværende projekter i WorkBook for NEW_USER_NAME",
+      "description": "",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ]
+    },
+    {
+      "title": "Overdragelse af filer på USER_NAMEs computer",
+      "description": "Hvor skal filerne lægges? Hvem skal have adgang til dem?",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "1",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ]
+    },
+    {
+      "title": "Overdragelse af filer i USER_NAMEs Google-konto",
+      "description": "Hvad skal der ske med de filer der ligger på USER_NAMEs Google-konto?",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "1",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ]
+    },
+    {
+      "title": "Overdragelse USER_NAMEs udstyr til IT-afdelingen",
+      "description": "Sørg for, at USER_NAME har afleveret lt sit udstyr til IT-afdelingen",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "0",
+      "column": "1",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ]
+    },
+    {
+      "title": "Aflever USER_NAMEs nøgle til Helpdesk",
+      "description": "Sørg for, at USER_NAME har afleveret sin nøgle til Helpdesk",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "0",
+      "column": "1",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ]
+    },
+    {
+      "title": "Skriv til huset om USER_NAMEs fratrædelse",
+      "description": "Sørg for, at USER_NAME har afleveret sin nøgle til Helpdesk",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-14",
+      "column": "2",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ]
+    },
+    {
+      "title": "Overvej afskedsarrangement for USER_NAME",
+      "description": "",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "-7",
+      "column": "2",
+      "tags": [
+        "People manager",
+        "Kontrapunkt"
+      ],
+      "keys": [
+      ],
+      "subtasks": [
+        {"title": "Lav arrangement i kalender"},
+        {"title": "Inviter evt. i chat"}
+      ]
+    },
+    {
+      "title": "Slet USER_NAME fra website",
+      "description": "",
+      "owner": "stkw",
+      "color": "pink",
+      "due_date": "",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "keys": [
+        "employee"
+      ],
+      "subtasks": [
+        {"title": "Bed om at få billede/profil af USER_NAME sletter fra website"},
+        {"title": "Bekræft at USER_NAME er slettet fra website"}
+      ]
+    }
+  ]
+}
+
+
