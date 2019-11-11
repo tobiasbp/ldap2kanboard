@@ -17,7 +17,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on use of Google Hangouts Chat", "url": "https://tinyurl.com/yb92l3m7"}
+        {"title": "Info on use of Google Hangouts Chat", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/google-g-suite/hangout-chat"}
       ],
       "tags": [
         "Onboarding"
@@ -33,7 +33,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on use of file server", "url": "https://tinyurl.com/yd6duryh"}
+        {"title": "Info on use of file server", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/fileserver"}
       ],
       "tags": [
         "Onboarding"
@@ -49,7 +49,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "About the intranet", "url": "https://tinyurl.com/ybu6ve87"}
+        {"title": "About the intranet", "url": "https://sites.google.com/kontrapunkt.com/intranet/kontrapunkt-everland-intranet"}
       ],
       "tags": [
         "Onboarding"
@@ -65,7 +65,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "IT policy (Danish)", "url": "https://tinyurl.com/y9gpzel4"}
+        {"title": "IT policy (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/it-politik"}
       ],
       "tags": [
         "Onboarding"
@@ -81,7 +81,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on the corporate fonts", "url": "https://tinyurl.com/y76bl7h6"}
+        {"title": "Info on the corporate fonts", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/fonts"}
       ],
       "tags": [
         "Onboarding"
@@ -97,7 +97,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on account life cycle", "url": "http://tinyurl.com/y6mmf7pg"}
+        {"title": "Info on account life cycle", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/ans%C3%A6ttelse/account-life-cycle"}
       ],
       "tags": [
         "Onboarding"
@@ -113,7 +113,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on Google services (Danish)", "url": "https://tinyurl.com/ybwamsco"}
+        {"title": "Info on Google services", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/google-g-suite"}
       ],
       "tags": [
         "Onboarding"
@@ -129,7 +129,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on emergency situations", "url": "https://tinyurl.com/y5zzpxro"}
+        {"title": "Info on emergency situations", "url": "https://sites.google.com/kontrapunkt.com/intranet/huset/first-aid-fire-drills"}
       ],
       "tags": [
         "Onboarding"
@@ -148,7 +148,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on how to update your personal data", "url": "https://tinyurl.com/yyg5gwjo"}
+        {"title": "Info on how to update your personal data", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/maintaining-your-personal-data"}
       ],
       "tags": [
         "Onboarding"
@@ -172,6 +172,27 @@
       ],
       "keys": [
         "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Make sure you have an Apple ID",
+      "description": "You need an Apple ID to use Apple Computers and iPhones",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "Kontrapunkt Copenhagen"
+      ],
+      "links": [
+        {"title": "How to create an Apple ID", "url": "https://support.apple.com/en-us/HT204316"}
       ]
     },
     {
@@ -200,7 +221,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "How to use WorkBook (Danish)", "url": "https://tinyurl.com/yanwrheg"}
+        {"title": "How to use WorkBook (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/workbook"}
       ],
       "tags": [
         "Onboarding"
@@ -238,7 +259,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Login to Adobe here", "url": "https://tinyurl.com/yahz2py2'"}
+        {"title": "Login to Adobe here", "url": "https://account.adobe.com"}
       ],
       "tags": [
         "Onboarding"
@@ -257,7 +278,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "About massage", "url": "https://tinyurl.com/yb8hy6qm"}
+        {"title": "About massage (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/huset/massage"}
       ],
       "tags": [
         "Onboarding"
@@ -276,7 +297,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "The freelance guide", "url": "https://tinyurl.com/y7hb8uzg"}
+        {"title": "The freelance guide", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/freelance-leverand%C3%B8raftaler/freelanceguide"}
       ],
       "tags": [
         "Onboarding"
