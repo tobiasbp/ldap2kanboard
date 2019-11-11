@@ -194,6 +194,7 @@
       ],
       "subtasks": [
         {"title": "Udlever fysisk nøgle"},
+        {"title": "Opdater nøgleskema"},
         {"title": "Udlever kode eller brik (RFID) til alarm"},
         {"title": "Gennemgang af alarmsystem"},
         {"title": "Gennemgang af brandsikkerhed"}
@@ -570,7 +571,7 @@
       ]
     },
     {
-      "title": "Find en plads til NEW_USER_NAME",
+      "title": "Find et bord til NEW_USER_NAME",
       "description": "",
       "owner": "ROLE_MANAGER",
       "color": "blue",
@@ -578,6 +579,9 @@
       "column": "2",
       "tags": [
         "People manager"
+      ],
+      "subtasks": [
+        {"title": "Informér helpdesk om hvor NEW_USER_NAME skal sidde."}
       ]
     },
     {
