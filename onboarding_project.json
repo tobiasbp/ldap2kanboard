@@ -440,7 +440,7 @@
       ]
     },
     {
-      "title": "Annoncér NEW_USER_NAME til huset i Google Chat",
+      "title": "Annoncér NEW_USER_NAME til huset i (GRP - People)",
       "description": "",
       "owner": "ROLE_MANAGER",
       "color": "blue",
@@ -448,6 +448,9 @@
       "column": "2",
       "tags": [
         "People manager"
+      ],
+      "links": [
+        {"title": "Chat room 'GRP - People'", "url": "https://chat.google.com/room/AAAAQE9fUxQ"}
       ]
     },
     {
