@@ -264,6 +264,10 @@ for u in con.entries:
       # Warn if no manager
       logging.warning("No manager found for user ''".format(u.cn))
 
+    keys = [
+      str(u.employeeType),
+      str(u.o)
+    ]
 
     # Project description with placeholders
     description = (
@@ -287,7 +291,8 @@ for u in con.entries:
       project_identifier = project_identifier,
       due_date = u_start_date,
       roles = roles,
-      placeholders = placeholders
+      placeholders = placeholders,
+      keys = keys
       )
 
     # Log the completion of the project
