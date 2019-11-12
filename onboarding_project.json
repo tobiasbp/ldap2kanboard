@@ -210,6 +210,32 @@
         {"title": "Læg blok"},
         {"title": "Læg Post-it"},
         {"title": "Læg skriveredskaber"},
+        {"title": "Læg Æble"},
+        {"title": "Læg lille håndskreven hilsen til NEW_USER_NAME"},
+        {"title": "Hent blomster"},
+        {"title": "Sæt blomster på NEW_USER_NAMEs bord"}
+      ],
+      "keys": [
+        "employee", "hours", "Everland"
+      ]
+    },
+    {
+      "title": "Klargør skrivebord til NEW_USER_NAME",
+      "description": "Denne sag afhænger af, at people manageren finder et bord",
+      "owner": "helpdesk",
+      "color": "purple",
+      "due_date": "-1",
+      "column": "1",
+      "tags": [
+        "Helpdesk",
+        "Kontrapunkt"
+      ],
+      "subtasks": [
+        {"title": "Hvor skal NEW_USER_NAME person sidde? Spørg people manager."},
+        {"title": "Rengør bord"},
+        {"title": "Læg blok"},
+        {"title": "Læg Post-it"},
+        {"title": "Læg skriveredskaber"},
         {"title": "Læg \"Tone of voice\" 2 & 3"},
         {"title": "Læg Æble"},
         {"title": "Læg lille håndskreven hilsen til NEW_USER_NAME"},
@@ -217,7 +243,7 @@
         {"title": "Sæt blomster på NEW_USER_NAMEs bord"}
       ],
       "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+        "employee", "hours", "Kontrapunkt Copenhagen"
       ]
     },
     {
@@ -592,7 +618,7 @@
         "People manager"
       ],
       "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+        "employee", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -606,7 +632,7 @@
         "People manager"
       ],
       "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+        "employee", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -622,7 +648,6 @@
       "subtasks": [
         {"title": "Underskriv ansættelseskontrakt"},
         {"title": "Læg ansættelseskontrakt i medarbejdermappen"},
-        {"title": "Underskriv consent"},
         {"title": "Læg consent i medarbejdermappen"}
       ],
       "keys": [
@@ -633,8 +658,8 @@
       ]
     },
     {
-      "title": "Underskriv NDA for ny NEW_USER_NAME",
-      "description": "IT kan ikke gøre udstyr etc. klar før dette er sket.",
+      "title": "Underskriv NDA & Consent for ny NEW_USER_NAME",
+      "description": "IT kan ikke gøre udstyr etc. klar før dette er sket. Filerne skal have de rigtige navne.",
       "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-21",
@@ -643,8 +668,10 @@
         "People manager"
       ],
       "subtasks": [
+        {"title": "Underskriv consent"},
+        {"title": "Læg underskrevet consent i NEW_USER_NAMEs medarbejdermappe som 'consent_signed_yes.pdf'"},
         {"title": "Underskriv NDA"},
-        {"title": "Læg NDA i NEW_USER_NAMEs medarbejdermappe så konti oprettes"}
+        {"title": "Læg NDA i NEW_USER_NAMEs medarbejdermappe som 'NDA_signed.pdf'"}
       ]
     },
     {
@@ -670,6 +697,9 @@
       "column": "2",
       "tags": [
         "People manager"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -684,6 +714,9 @@
       ],
       "subtasks": [
         {"title": "Informér helpdesk om hvor NEW_USER_NAME skal sidde."}
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
