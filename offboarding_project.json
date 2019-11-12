@@ -278,6 +278,9 @@
         {"title": "Sørg for at USER_NAME har frakoblet sit Apple ID fra Apple computer"},
         {"title": "Opdater assets-database for udstyr brugt af USER_NAME"},
         {"title": "Undersøg hvilket udstyr der er udlevert til USER_NAME ved at se i assets-database"}
+      ],
+      "links": [
+        {"title": "Sådan frakobler man sit Apple ID", "url": "https://support.apple.com/lv-lv/HT201351"}
       ]
     },
     {
