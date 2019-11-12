@@ -611,7 +611,7 @@
     },
     {
       "title": "Underskriv kontrakter med NEW_USER_NAME",
-      "description": "",
+      "description": "Hvis du sender en kontrakt via Gmail, SKAL du bruge confidential mode.",
       "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "+7",
@@ -627,6 +627,9 @@
       ],
       "keys": [
         "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+      ],
+      "links": [
+        {"title": "How to send confidential emails with Gmail", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/google-g-suite/gmail/encrypting-mails"}
       ]
     },
     {
