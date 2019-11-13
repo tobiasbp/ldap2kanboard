@@ -338,8 +338,8 @@ for u in con.entries:
         .format(u.cn))
       continue
 
-    print("User '{}({})' of type '{}' has end date in {} days."
-      .format(u.cn, u.uid, u.employeeType, u_days_left))
+    #print("User '{}({})' of type '{}' has end date in {} days."
+    #  .format(u.cn, u.uid, u.employeeType, u_days_left))
 
     # The user's end date
     u_start_date = datetime.date(u[USER_START_DATE_FIELD].value)
@@ -397,14 +397,10 @@ for u in con.entries:
       "* People manager: USER_MANAGER_NAME"
       )
 
-    #print(roles)
-    #print(placeholders)
-    #print(project_identifier)
-
     # Keys used for matching tasks
     keys = [
-      u.employeeType.value,
-      # str(u.o)
+      str(u.employeeType),
+      str(u.o)
     ]
 
     # Create the kanboard project
@@ -415,7 +411,8 @@ for u in con.entries:
       project_identifier = project_identifier,
       due_date = u_end_date,
       roles = roles,
-      placeholders = placeholders
+      placeholders = placeholders,
+      keys = keys
       )
 
     # Log the completion of the project

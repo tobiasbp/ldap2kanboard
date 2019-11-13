@@ -9,16 +9,14 @@
   ],
   "tasks": [
     {
-      "title": "Modtag fysisk nøgle fra USER_NAME",
-      "description": "",
+      "title": "Modtag fysisk nøgle fra USER_NAMEs people manager",
+      "description": "USER_NAME bør have afleveret sin nøgle til sin people manager.",
       "owner": "helpdesk",
       "color": "purple",
-      "due_date": "0",
+      "due_date": "2",
       "column": "1",
       "tags": [
         "Helpdesk"
-      ],
-      "keys": [
       ],
       "subtasks": [
         {"title": "Modtag nøgle"},
@@ -27,7 +25,7 @@
     },
     {
       "title": "Check kalender-events i forbindelse med USER_NAMEs sidste dag",
-      "description": "Hjælp til oprydning af bord og reol (cleares med teamleder)",
+      "description": "",
       "owner": "helpdesk",
       "color": "purple",
       "due_date": "-21",
@@ -51,6 +49,9 @@
       "column": "2",
       "tags": [
         "Finance"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -62,6 +63,9 @@
       "column": "1",
       "tags": [
         "Finance"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -79,6 +83,9 @@
         {"title": "Check USER_NAMEs af take away fra køkkenet"},
         {"title": "Check om USER_NAMEs har købt IT-udstyr af Kontrapunkt "},
         {"title": "Indtast data i Dataløn"}
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -90,6 +97,9 @@
       "column": "1",
       "tags": [
         "Finance"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -101,6 +111,9 @@
       "column": "2",
       "tags": [
         "Finance"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -112,6 +125,9 @@
       "column": "2",
       "tags": [
         "Finance"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -127,6 +143,9 @@
       "subtasks": [
         {"title": "Check at questionaire er udfyldt"},
         {"title": "Læs svar sammen med people manager"}
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -142,6 +161,9 @@
       "subtasks": [
         {"title": "Indhent opsigelse fra people manager"},
         {"title": "Læg opsigelse i personalemappen for USER_NAME"}
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -153,6 +175,9 @@
       "column": "1",
       "tags": [
         "HR"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -191,9 +216,7 @@
         {"title": "Bekræft at alle opgaver med offboarding af USER_NAME er løste."},
         {"title": "Luk offboarding-projekt for USER_NAME"}
       ]
-
     },
-
     {
       "title": "Besked til pensionsselskab i forbindelse med USER_NAME opsigelse",
       "description": "",
@@ -203,6 +226,9 @@
       "column": "2",
       "tags": [
         "HR"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -214,6 +240,9 @@
       "column": "2",
       "tags": [
         "HR"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -246,6 +275,9 @@
       "column": "2",
       "tags": [
         "IT"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -257,6 +289,9 @@
       "column": "2",
       "tags": [
         "IT"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -293,6 +328,9 @@
       "tags": [
         "People manager",
         "Kontrapunkt"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -345,14 +383,27 @@
     },
     {
       "title": "Skriv til huset om USER_NAMEs fratrædelse",
-      "description": "Sørg for, at USER_NAME har afleveret sin nøgle til Helpdesk",
+      "description": "",
       "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
       "column": "2",
       "tags": [
-        "People manager",
-        "Kontrapunkt"
+        "People manager"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+      ]
+    },
+    {
+      "title": "Overvej at skrive noget pænt om USER_NAME på LinkedIn",
+      "description": "",
+      "owner": "ROLE_MANAGER",
+      "color": "blue",
+      "due_date": "7",
+      "column": "2",
+      "tags": [
+        "People manager"
       ]
     },
     {
@@ -366,11 +417,12 @@
         "People manager",
         "Kontrapunkt"
       ],
-      "keys": [
-      ],
       "subtasks": [
         {"title": "Lav arrangement i kalender"},
         {"title": "Inviter evt. i chat"}
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ]
     },
     {
@@ -384,7 +436,7 @@
         "Communication"
       ],
       "keys": [
-        "employee"
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
       ],
       "subtasks": [
         {"title": "Bed om at få billede/profil af USER_NAME sletter fra website"},
