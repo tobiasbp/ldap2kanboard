@@ -290,6 +290,25 @@
       ]
     },
     {
+      "title": "Read about conference calls/virtual meetings",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "About conference calls (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/digitale-m%C3%B8der"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
       "title": "Read the freelance guide",
       "description": "",
       "owner": "",
