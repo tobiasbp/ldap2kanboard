@@ -3,6 +3,7 @@
   "description": "Onboarding of NEW_USER_NAME",
   "owner": "js",
   "users": [
+      {"name": "js", "role": "project-manager"}
     ],
   "swimlanes": [
     {"title": "Swimlane A", "desc": "Swimlane description"}
