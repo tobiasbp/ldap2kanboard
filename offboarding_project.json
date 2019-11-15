@@ -193,7 +193,7 @@
     },
     {
       "title": "Sørg for at people people manager for USER_NAME ved at Google-data slettes efter 180 dage",
-      "description": "Data i Google slettes efter 180 dage. Sørg for at People manager er klar over det.",
+      "description": "Data i Google slettes efter 180 dage (GDPR). Sørg for at People manager er klar over det.",
       "owner": "js",
       "color": "orange",
       "due_date": "-21",
@@ -347,7 +347,7 @@
     },
     {
       "title": "Overdragelse af filer i USER_NAMEs Google-konto",
-      "description": "Hvad skal der ske med de filer der ligger på USER_NAMEs Google-konto?",
+      "description": "De filer der ikke er overdraget, slettes efter 180 dage. De overdrages ikke som tidligere til people maneger (GDPR).",
       "owner": "ROLE_MANAGER",
       "color": "blue",
       "due_date": "-14",
