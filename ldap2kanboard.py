@@ -391,7 +391,7 @@ for u in con.entries:
       "* Work email: USER_WORK_MAIL\n" +
       "* Company: USER_COMPANY\n" +
       "* Title: USER_TITLE\n" +
-      "* Start date: USER_END_DATE\n" +
+      "* Start date: USER_START_DATE\n" +
       "* End date: USER_END_DATE\n" +
       "* Type: USER_TYPE\n" +
       "* People manager: USER_MANAGER_NAME"
