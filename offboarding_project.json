@@ -320,7 +320,7 @@
       ]
     },
     {
-      "title": "Overdragelse af igangværende projekter i WorkBook for NEW_USER_NAME",
+      "title": "Overdragelse af igangværende projekter i WorkBook for USER_NAME",
       "description": "",
       "owner": "ROLE_MANAGER",
       "color": "blue",
