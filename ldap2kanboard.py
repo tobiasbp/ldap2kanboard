@@ -427,8 +427,8 @@ for u in con.entries:
 for u in con.entries:
 
   # Demo: Only create for this user
-  if u.uid != 'plj':
-    continue
+  #if u.uid != 'plj':
+  #  continue
 
   # Identifier for users personal project
   project_identifier = MY_TASKS_PROJECT_ID_PREFIX + str(u.uidNumber) 
