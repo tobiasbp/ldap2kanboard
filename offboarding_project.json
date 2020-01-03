@@ -296,6 +296,20 @@
       ]
     },
     {
+      "title": "Slet Kanboard-projekt 'my tasks' for USER_NAME",
+      "description": "Slet der personlige projekt 'my tasks' for USER_NAME i Kanboard",
+      "owner": "plj",
+      "color": "green",
+      "due_date": "",
+      "column": "1",
+      "tags": [
+        "IT"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+      ]
+    },
+    {
       "title": "Gennemgang af returneret udstyr med USER_NAME",
       "description": "",
       "owner": "plj",
