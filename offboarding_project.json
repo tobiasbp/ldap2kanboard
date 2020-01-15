@@ -97,7 +97,7 @@
       "due_date": "-7",
       "column": "1",
       "tags": [
-        "Finance"
+       "Finance"
       ],
       "keys": [
         "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
@@ -297,7 +297,7 @@
     },
     {
       "title": "Slet Kanboard-projekt 'my tasks' for USER_NAME",
-      "description": "Slet der personlige projekt 'my tasks' for USER_NAME i Kanboard",
+      "description": "Sørg for at USER_NAME har slettet (Ikke lukket!) det personlige projekt 'my tasks' i Kanboard",
       "owner": "plj",
       "color": "green",
       "due_date": "",
