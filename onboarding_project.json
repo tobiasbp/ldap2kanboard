@@ -560,7 +560,7 @@
       ]
     },
     {
-      "title": "Indkalde alle people managers til første fredagsbar med NEW_USER_NAME",
+      "title": "Indkalde NEW_USER_NAME's team til førstkommende fredagsbar",
       "description": "",
       "owner": "ROLE_MANAGER",
       "color": "blue",
