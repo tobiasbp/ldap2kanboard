@@ -42,20 +42,6 @@
       ]
     },
     {
-      "title": "Sæt sidste dag for USER_NAME i WorkBook",
-      "description": "Opdater dato, sår USER_NAME ikke kan logge på WorkBook efter sidste arbejdsdag.",
-      "owner": "js",
-      "color": "dark_grey",
-      "due_date": "1",
-      "column": "2",
-      "tags": [
-        "Finance"
-      ],
-      "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
-      ]
-    },
-    {
       "title": "Inaktiver konto for USER_NAME i WorkBook",
       "description": "Inaktiver bruger for USER_NAME i WorkBook sp vi ikke skal betale for en licens.",
       "owner": "js",
