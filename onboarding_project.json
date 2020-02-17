@@ -299,6 +299,20 @@
       ]
     },
     {
+      "title": "Indkald NEW_USER_NAME til mødet 'Intro til kommunikation'",
+      "description": "",
+      "owner": "stkw",
+      "color": "pink",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "keys": [
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
       "title": "Billede til website af NEW_USER_NAME",
       "description": "",
       "owner": "stkw",
@@ -314,7 +328,7 @@
         {"title": "Opdater website med billede af NEW_USER_NAME"}
       ],
       "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+        "employee", "hours", "Kontrapunkt Copenhagen"
       ]
     },
     {
