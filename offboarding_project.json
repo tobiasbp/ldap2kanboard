@@ -43,7 +43,7 @@
     },
     {
       "title": "Inaktiver konto for USER_NAME i WorkBook",
-      "description": "Inaktiver bruger for USER_NAME i WorkBook sp vi ikke skal betale for en licens.",
+      "description": "Inaktiver bruger for USER_NAME i WorkBook så vi ikke skal betale for en licens.",
       "owner": "js",
       "color": "dark_grey",
       "due_date": "1",
