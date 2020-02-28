@@ -350,7 +350,48 @@
         {"title": "Post på eget website"}
       ],
       "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Billede til website af NEW_USER_NAME",
+      "description": "",
+      "owner": "rvp",
+      "color": "pink",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "subtasks": [
+        {"title": "Skal der et profilbillede på websitet af NEW_USER_NAME?"},
+        {"title": "Tag billede af NEW_USER_NAME"},
+        {"title": "Opdater website med billede af NEW_USER_NAME"}
+      ],
+      "keys": [
+        "employee", "hours", "Everland"
+      ]
+    },
+    {
+      "title": "Annoncér NEW_USER_NAME eksternt",
+      "description": "",
+      "owner": "rvp",
+      "color": "pink",
+      "due_date": "+7",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "subtasks": [
+        {"title": "Skriv tekst om NEW_USER_NAME"},
+        {"title": "Få fat i billede af NEW_USER_NAME"},
+        {"title": "Få tekst om NEW_USER_NAME godkendt hos people manager"},
+        {"title": "Post på Linked-in"},
+        {"title": "Post på Facebook"},
+        {"title": "Post på eget website"}
+      ],
+      "keys": [
+        "employee", "hours", "Everland"
       ]
     },
     {

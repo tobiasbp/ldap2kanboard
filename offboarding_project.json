@@ -437,7 +437,25 @@
         "Communication"
       ],
       "keys": [
-        "employee", "hours", "Kontrapunkt Copenhagen", "Everland"
+        "employee", "hours", "Kontrapunkt Copenhagen"
+      ],
+      "subtasks": [
+        {"title": "Bed om at få billede/profil af USER_NAME sletter fra website"},
+        {"title": "Bekræft at USER_NAME er slettet fra website"}
+      ]
+    },
+    {
+      "title": "Slet USER_NAME fra website",
+      "description": "",
+      "owner": "rvp",
+      "color": "pink",
+      "due_date": "",
+      "column": "2",
+      "tags": [
+        "Communication"
+      ],
+      "keys": [
+        "employee", "hours", "Everland"
       ],
       "subtasks": [
         {"title": "Bed om at få billede/profil af USER_NAME sletter fra website"},
