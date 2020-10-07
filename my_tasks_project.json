@@ -33,7 +33,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on use of file server", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/fileserver"}
+        {"title": "Info on use of file server", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/file-server"}
       ],
       "tags": [
         "Onboarding"
@@ -58,14 +58,14 @@
       ]
     },
     {
-      "title": "Read the intranet page on IT policy (Danish)",
+      "title": "Read the intranet page on IT policy",
       "description": "Familiarize yourself with the IT policy",
       "owner": "",
       "color": "",
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "IT policy (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/it-politik"}
+        {"title": "IT policy", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/it-policy"}
       ],
       "tags": [
         "Onboarding"
@@ -81,7 +81,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on the corporate fonts", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/fonts"}
+        {"title": "Info on the corporate fonts", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/applications-resources/fonts"}
       ],
       "tags": [
         "Onboarding"
@@ -97,7 +97,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on account life cycle", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/ans%C3%A6ttelse/account-life-cycle"}
+        {"title": "Info on account life cycle", "url": " https://sites.google.com/kontrapunkt.com/intranet/administration/employment-of-a-new-colleague/account-life-cycle"}
       ],
       "tags": [
         "Onboarding"
@@ -122,14 +122,33 @@
       ]
     },
     {
-      "title": "Make sure you know what to do in case of an emergency",
+      "title": "Make sure you know what to do in case of a fire",
       "description": "",
       "owner": "",
       "color": "",
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "Info on emergency situations", "url": "https://sites.google.com/kontrapunkt.com/intranet/huset/first-aid-fire-drills"}
+        {"title": "Info on fire", "url": "https://sites.google.com/kontrapunkt.com/intranet/in-house-information/office-utilities/fire"}
+      ],
+      "tags": [
+        "Onboarding"
+      ],
+      "subtasks": [
+      ],
+      "keys": [
+        "employee", "hours", "freelancer", "Kontrapunkt Copenhagen"
+      ]
+    },
+    {
+      "title": "Read about first aid",
+      "description": "",
+      "owner": "",
+      "color": "",
+      "due_date": "7",
+      "column": "2",
+      "links": [
+        {"title": "Info on first aid", "url": "https://sites.google.com/kontrapunkt.com/intranet/in-house-information/office-utilities/first-aid"}
       ],
       "tags": [
         "Onboarding"
@@ -278,7 +297,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "About massage (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/huset/massage"}
+        {"title": "About massage", "url": "https://sites.google.com/kontrapunkt.com/intranet/in-house-information/service-catering/massage"}
       ],
       "tags": [
         "Onboarding"
@@ -290,14 +309,14 @@
       ]
     },
     {
-      "title": "Read about conference calls/virtual meetings",
+      "title": "Read about Google Meet",
       "description": "",
       "owner": "",
       "color": "",
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "About conference calls (Danish)", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/digitale-m%C3%B8der"}
+        {"title": "About Google Meet", "url": "https://sites.google.com/kontrapunkt.com/intranet/it-support/google-g-suite/meet"}
       ],
       "tags": [
         "Onboarding"
@@ -316,7 +335,7 @@
       "due_date": "7",
       "column": "2",
       "links": [
-        {"title": "The freelance guide", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/freelance-leverand%C3%B8raftaler/freelanceguide"}
+        {"title": "The freelance guide", "url": "https://sites.google.com/kontrapunkt.com/intranet/administration/freelancer-distributor-contracts/freelance-guide"}
       ],
       "tags": [
         "Onboarding"
